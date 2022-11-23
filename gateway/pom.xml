@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>com.ansv</groupId>
 	<artifactId>gateway</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>gateway</name>
-	<description>Demo project for Spring Boot</description>
+	<description>ANSV gateway</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.5</spring-cloud.version>
