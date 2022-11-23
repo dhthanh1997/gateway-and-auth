@@ -1,0 +1,58 @@
+server:
+  port: 8051
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8052/eureka/
+  instance:
+    hostname: localhost
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: ansv-gateway
+  cloud:
+    gateway:
+      # httpclient:
+      #     proxy:
+      #       host: localhost
+      # port: 8888
+      default-filters:
+      - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+      - AddResponseHeader=Access-Control-Allow-Origin, *
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          "[/**]":
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: app1
+          uri: http://localhost:8091
+          predicates:
+            - Path=/app1/**
+        - id: app2
+          uri: http://localhost:8090
+          predicates:
+            - Path=/app2/**
+        - id: authorization
+          uri: http://localhost:8053
+          predicates:
+            - Path=/authorization/**
+            - Method=GET,POST,PUT,DELETE
+      httpserver:
+        wiretap: true
+logging:
+  level:
+    reactor: 
+      netty: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+
+    
+
