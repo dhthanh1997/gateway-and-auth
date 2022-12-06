@@ -38,6 +38,10 @@ spring:
           uri: http://localhost:8090
           predicates:
             - Path=/app2/**
+        - id: taskManagement
+          uri: http://localhost:8092
+          predicates:
+            - Path=/app2/**
         - id: authorization
           uri: http://localhost:8053
           predicates:
