@@ -1,5 +1,5 @@
 server:
-  port: 8051
+  port: 8055
 
 eureka:
   client:
@@ -38,14 +38,15 @@ spring:
           uri: http://localhost:8090
           predicates:
             - Path=/app2/**
-        - id: taskManagement
+        - id: task-management
           uri: http://localhost:8092
           predicates:
-            - Path=/app2/**
-        - id: authorization
+            - Path=/taskManagement/**
+            - Method=GET,POST,PUT,DELETE
+        - id: authentication
           uri: http://localhost:8053
           predicates:
-            - Path=/authorization/**
+            - Path=/authentication/**
             - Method=GET,POST,PUT,DELETE
       httpserver:
         wiretap: true

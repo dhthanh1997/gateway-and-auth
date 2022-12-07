@@ -58,7 +58,7 @@ public class LdapAuthSecurityConfig extends WebSecurityConfigurerAdapter {
 
     @Value("${spring.ldap.authen.managerPassword:#{null}}")
     private String managerPassword;
-    @Value("${spring.ldap.authen.dn-patterns:#{null}}")
+    @Value("${spring.ldap.authen.dn-patterLdapUserAuthoritiesPopulatorns:#{null}}")
     private String dnPatterns;
     @Value("${spring.ldap.authen.filter:#{null}}")
     private String searchFilter;
@@ -105,6 +105,9 @@ public class LdapAuthSecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/authorization/**").permitAll()
                 .antMatchers(HttpMethod.POST, "/authorization/login").permitAll()
+                .antMatchers("/authentication/**").permitAll()
+                .antMatchers(HttpMethod.POST, "/authentication/login").permitAll()
+
 
                 // // private endpoints
                 // .antMatchers("/api/user/**").permitAll()

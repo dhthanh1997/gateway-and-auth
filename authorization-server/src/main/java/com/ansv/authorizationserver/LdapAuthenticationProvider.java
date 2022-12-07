@@ -1,10 +1,13 @@
 package com.ansv.authorizationserver;
 
+import com.ansv.authorizationserver.service.impl.CustomUserDetailService;
+import com.ansv.authorizationserver.service.impl.CustomUserDetails;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.env.Environment;
+import org.springframework.ldap.core.AttributesMapper;
 import org.springframework.ldap.core.LdapTemplate;
 import org.springframework.ldap.core.support.LdapContextSource;
 import org.springframework.ldap.filter.EqualsFilter;
@@ -20,7 +23,10 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Component;
 
+import javax.naming.NamingException;
+import javax.naming.directory.Attributes;
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Component
@@ -31,7 +37,7 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
 
     private Environment environment;
 
-    private UserDetailsService userDetailsService;
+    private CustomUserDetailService customUserDetailService;
 
     private String ldapUrl;
     private String base;
@@ -83,7 +89,7 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
         this.managerPassword = managerPassword;
         this.filter = filter;
         this.base = dnPatterns;
-        this.userDetailsService = userDetailsService;
+        this.customUserDetailService = (CustomUserDetailService) userDetailsService;
     }
 
     @Override
@@ -95,8 +101,19 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
         LdapQuery query = LdapQueryBuilder.query().base(base).searchScope(searchScope).filter(filterLdap);
 
         try {
+
             ldapTemplate.authenticate(query, authentication.getCredentials().toString());
-            UserDetails userDetails = userDetailsService.loadUserByUsername(authentication.getName());
+            List<CustomUserDetails> users = ldapTemplate.search(query, new AttributesMapper() {
+                public CustomUserDetails mapFromAttributes(Attributes attributes) throws NamingException {
+                    CustomUserDetails user = new CustomUserDetails();
+                    user.setUsername((String) attributes.get("sAMAccountName").get());
+                    user.setDisplayName((String) attributes.get("displayName").get());
+                    user.setEmail((String) attributes.get("userPrincipalName").get());
+                    return user;
+                }
+            });
+
+            UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
             Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
                     authentication.getCredentials().toString(), new ArrayList<>());
             return auth;

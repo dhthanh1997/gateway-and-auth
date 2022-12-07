@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/app1/app1.iml" filepath="$PROJECT_DIR$/app1/app1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app2/app2.iml" filepath="$PROJECT_DIR$/app2/app2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/authorization-server/authorization-server.iml" filepath="$PROJECT_DIR$/authorization-server/authorization-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/euruka/euruka.iml" filepath="$PROJECT_DIR$/euruka/euruka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/gateway-and-auth.iml" filepath="$PROJECT_DIR$/.idea/gateway-and-auth.iml" />
     </modules>
   </component>
