@@ -2,21 +2,22 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="app2" />
-        <module name="app1" />
         <module name="authorization-server" />
         <module name="euruka" />
         <module name="gateway" />
+        <module name="app2" />
+        <module name="app1" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="app1" target="11" />
       <module name="app2" target="11" />
-      <module name="authorization-server" target="11" />
+      <module name="authorization-server" target="1.5" />
       <module name="euruka" target="11" />
       <module name="gateway" target="11" />
     </bytecodeTargetLevel>
