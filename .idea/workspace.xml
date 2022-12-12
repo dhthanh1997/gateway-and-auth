@@ -20,22 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_rabbitmq_amqp_client_5_16_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_processor_1_5_3_Final.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_amqp_2_4_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_amqp_spring_rabbit_2_4_7.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_3_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/dto/mapper/UserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/rabbitmq/RabbitMqConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/rabbitmq/RabbitMqReceiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/rabbitmq/RabbitMqSender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/dto/response/UserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/dto/response/UserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/CustomUserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/CustomUserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -320,6 +305,14 @@
     </state>
     <state width="1127" height="343" key="GridCell.Tab.2.right/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202634" />
     <state width="1454" height="422" key="GridCell.Tab.2.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212943" />
+    <state x="129" y="55" key="MergeDialog" timestamp="1670835413321">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="129" y="55" key="MergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1670835413321" />
+    <state x="321" y="125" key="MultipleFileMergeDialog" timestamp="1670835413336">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="321" y="125" key="MultipleFileMergeDialog/0.0.1366.728@0.0.1366.728" timestamp="1670835413336" />
     <state width="728" height="438" key="XDebugger.FullValuePopup" timestamp="1670386879827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
