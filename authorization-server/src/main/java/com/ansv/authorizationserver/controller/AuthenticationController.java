@@ -29,7 +29,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @RestController
-@RequestMapping("/authorization")
+@RequestMapping("/authentication")
 public class AuthenticationController {
 
     @Autowired
