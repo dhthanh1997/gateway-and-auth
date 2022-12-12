@@ -1,5 +1,7 @@
 package com.ansv.authorizationserver.service.impl;
 
+import com.ansv.authorizationserver.dto.mapper.UserMapper;
+import com.ansv.authorizationserver.dto.response.UserDTO;
 import com.ansv.authorizationserver.model.UserEntity;
 import com.ansv.authorizationserver.repository.UserEntityRepository;
 import com.ansv.authorizationserver.util.DataUtils;
@@ -101,5 +103,12 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
             return newUser;
         }
         return newUser;
+    }
+
+    @Override
+    public UserDTO findByUsername(String username) {
+        UserEntity entity = userRepository.findByUsername(username);
+        UserDTO dto = UserMapper.INSTANCE.modelToDTO(entity);
+        return dto;
     }
 }

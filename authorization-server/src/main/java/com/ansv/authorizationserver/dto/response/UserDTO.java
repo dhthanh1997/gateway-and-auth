@@ -12,6 +12,7 @@ import java.util.Set;
 
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class UserDTO {
     private Long id;
@@ -31,6 +32,8 @@ public class UserDTO {
     private String note;
 
     private Long roleId;
+
+    private Long departmentId;
 
     private String password;
 
