@@ -26,16 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/authorization-server/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/authorization-server/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/euruka/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/euruka/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euruka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +207,8 @@
       <workItem from="1670515832630" duration="2358000" />
       <workItem from="1670549857443" duration="11200000" />
       <workItem from="1670810832166" duration="2123000" />
+      <workItem from="1670856849640" duration="2091000" />
+      <workItem from="1670895553740" duration="2800000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
