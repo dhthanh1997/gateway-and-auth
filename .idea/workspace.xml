@@ -27,7 +27,6 @@
   <component name="ChangeListManager">
     <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -209,7 +208,7 @@
       <workItem from="1670549857443" duration="11200000" />
       <workItem from="1670810832166" duration="2123000" />
       <workItem from="1670856849640" duration="2091000" />
-      <workItem from="1670895553740" duration="3870000" />
+      <workItem from="1670895553740" duration="5473000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -380,6 +379,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="102" y="50" key="new project wizard/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670294322207" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1670920061450">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1670920061450" />
     <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1670485442272">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
