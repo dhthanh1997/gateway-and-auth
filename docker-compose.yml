@@ -1,14 +1,17 @@
 version: "3.7"
 services:
   euruka:
+    image: ansv-registry
     build: ./euruka
     ports:
       - "8052:8052"
   gateway:
+    image: ansv-gateway
     build: ./gateway
     ports:
       - "8055:8055"
   authorization:
+    image: ansv-authorization
     build: ./authorization-server
     ports:
       - "8053:8053"
