@@ -1,5 +1,14 @@
 version: "3.7"
 services:
+  rabbitmq:
+    image: rabbitmq:3.11-management
+    hostname: rabbitmq-container
+    ports:
+      - 5673:5673
+      - 5672:5672
+      - 15672:15672
+    networks:
+      - microservices
   euruka:
     image: ansv-registry
     build: ./euruka
@@ -15,4 +24,22 @@ services:
     build: ./authorization-server
     ports:
       - "8053:8053"
-
+    environment:
+      - spring_rabbitmq_host=rabbitmq-container
+      - spring_rabbitmq_port=5672
+      - spring_rabbitmq_username=guest
+      - spring_rabbitmq_password=guest
+      - spring_rabbitmq_virtualHost=/
+      - spring_rabbitmq_exchange=task-management.req.events
+      - spring_rabbitmq_routingkey=detail.user.req
+      - spring_rabbitmq_queue=detail.user.task-management.req.queue
+    depends_on:
+      - rabbitmq-container
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - microservices
+networks:
+  microservices:
+    external:
+      name: microservices
