@@ -43,8 +43,8 @@ spring:
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
-        - id: authentication
-          uri: http://localhost:8053
+        - id: ansv-authorization
+          uri: http://ansv-authorization:8053
           predicates:
             - Path=/authentication/**
             - Method=GET,POST,PUT,DELETE
