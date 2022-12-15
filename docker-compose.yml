@@ -34,7 +34,7 @@ services:
       - spring_rabbitmq_routingkey=detail.user.req
       - spring_rabbitmq_queue=detail.user.task-management.req.queue
     depends_on:
-      - rabbitmq-container
+      - rabbitmq
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
