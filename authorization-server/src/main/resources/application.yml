@@ -36,7 +36,7 @@ spring:
   liquibase:
     enabled: false
   rabbitmq:
-    host: 192.168.88.148
+    host: localhost
     port: 5672
     username: guest
     password: guest

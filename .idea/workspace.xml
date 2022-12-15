@@ -28,7 +28,6 @@
     <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +210,7 @@
       <workItem from="1670856849640" duration="2091000" />
       <workItem from="1670895553740" duration="7403000" />
       <workItem from="1670988702708" duration="7112000" />
-      <workItem from="1671069320877" duration="1158000" />
+      <workItem from="1671069320877" duration="1801000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
