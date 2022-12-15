@@ -2,7 +2,7 @@ version: "3.7"
 services:
   rabbitmq:
     image: rabbitmq:3.11-management
-    hostname: rabbitmq-container
+    hostname: rabbitmq
     ports:
       - 5673:5673
       - 5672:5672
@@ -13,6 +13,7 @@ services:
       - euruka
   euruka:
     image: ansv-registry
+    hostname: regitry
     build: ./euruka
     ports:
       - "8052:8052"
@@ -20,6 +21,7 @@ services:
       - microservices
   gateway:
     image: ansv-gateway
+    hostname: gateway
     build: ./gateway
     ports:
       - "8055:8055"
@@ -29,11 +31,12 @@ services:
       - rabbitmq
   authorization:
     image: ansv-authorization
+    hostname: authorization
     build: ./authorization-server
     ports:
       - "8053:8053"
     environment:
-      - spring_rabbitmq_host=rabbitmq-container
+      - spring_rabbitmq_host=rabbitmq
       - spring_rabbitmq_port=5672
       - spring_rabbitmq_username=guest
       - spring_rabbitmq_password=guest
