@@ -4,10 +4,10 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8052/eureka/
+      defaultZone: http://ansv-registry:8052/eureka/
   instance:
-    hostname: localhost
-
+    hostname: ansv-registry
+#    hostname: localhost
 spring:
   main:
     web-application-type: reactive

@@ -5,13 +5,13 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8052/eureka/ 
+      defaultZone: http://ansv-registry:8052/eureka/
   instance:
-    hostname: localhost
+    hostname: ansv-registry
 
 spring:
   application:
-    name: authentication
+    name: authorization
   ldap:
     server:
       base: CN=Users,DC=ansv,DC=vn

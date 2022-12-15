@@ -3,11 +3,12 @@ server:
 
 spring:
   application:
-    name: eureka-server
+    name: ansv-registry
 
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8052/eureka
+      defaultZone: http://ansv-registry:8052/eureka
+#      defaultZone: http://localhost:8052/eureka

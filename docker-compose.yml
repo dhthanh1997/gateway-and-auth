@@ -13,7 +13,7 @@ services:
       - euruka
   euruka:
     image: ansv-registry
-    hostname: regitry
+    hostname: ansv-registry
     build: ./euruka
     ports:
       - "8052:8052"
@@ -21,7 +21,7 @@ services:
       - microservices
   gateway:
     image: ansv-gateway
-    hostname: gateway
+    hostname: ansv-gateway
     build: ./gateway
     ports:
       - "8055:8055"
@@ -31,7 +31,7 @@ services:
       - rabbitmq
   authorization:
     image: ansv-authorization
-    hostname: authorization
+    hostname: ansv-authorization
     build: ./authorization-server
     ports:
       - "8053:8053"
