@@ -9,16 +9,24 @@ services:
       - 15672:15672
     networks:
       - microservices
+    depends_on:
+      - euruka
   euruka:
     image: ansv-registry
     build: ./euruka
     ports:
       - "8052:8052"
+    networks:
+      - microservices
   gateway:
     image: ansv-gateway
     build: ./gateway
     ports:
       - "8055:8055"
+    networks:
+      - microservices
+    depends_on:
+      - rabbitmq
   authorization:
     image: ansv-authorization
     build: ./authorization-server
@@ -34,7 +42,7 @@ services:
       - spring_rabbitmq_routingkey=detail.user.req
       - spring_rabbitmq_queue=detail.user.task-management.req.queue
     depends_on:
-      - rabbitmq
+      - gateway
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
