@@ -23,7 +23,7 @@ spring:
   main:
     banner-mode: off
   datasource:
-    url: jdbc:postgresql://localhost:5432/Authorization
+    url: jdbc:postgresql://192.168.88.148:5432/Authorization
     username: postgres
     password: root
   jpa:
@@ -36,7 +36,7 @@ spring:
   liquibase:
     enabled: false
   rabbitmq:
-    host: localhost
+    host: 192.168.88.148
     port: 5672
     username: guest
     password: guest
