@@ -25,8 +25,11 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="">
+    <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,6 +89,12 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources\db\changelog" />
     </key>
+  </component>
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn spring-boot:run" />
+      <command value="mvn clean test" />
+    </option>
   </component>
   <component name="RunDashboard">
     <option name="configurationTypes">
@@ -210,7 +219,11 @@
       <workItem from="1670856849640" duration="2091000" />
       <workItem from="1670895553740" duration="7403000" />
       <workItem from="1670988702708" duration="7112000" />
-      <workItem from="1671069320877" duration="16445000" />
+      <workItem from="1671069320877" duration="16661000" />
+      <workItem from="1671112607758" duration="639000" />
+      <workItem from="1671173920903" duration="151000" />
+      <workItem from="1671174852333" duration="1050000" />
+      <workItem from="1671176597352" duration="6491000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -289,24 +302,28 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="500" y="131" key="FileChooserDialogImpl/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670294382359" />
-    <state width="1127" height="343" key="GridCell.Tab.0.bottom" timestamp="1670582202632">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1671175917307">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1671175917307" />
     <state width="1127" height="343" key="GridCell.Tab.0.bottom/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202632" />
     <state width="1454" height="422" key="GridCell.Tab.0.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1127" height="343" key="GridCell.Tab.0.center" timestamp="1670582202632">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1671175917307">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1671175917307" />
     <state width="1127" height="343" key="GridCell.Tab.0.center/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202632" />
     <state width="1454" height="422" key="GridCell.Tab.0.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1127" height="343" key="GridCell.Tab.0.left" timestamp="1670582202632">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1671175917307">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1671175917307" />
     <state width="1127" height="343" key="GridCell.Tab.0.left/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202632" />
     <state width="1454" height="422" key="GridCell.Tab.0.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1127" height="343" key="GridCell.Tab.0.right" timestamp="1670582202632">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1671175917307">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1671175917307" />
     <state width="1127" height="343" key="GridCell.Tab.0.right/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202632" />
     <state width="1454" height="422" key="GridCell.Tab.0.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
     <state width="1127" height="343" key="GridCell.Tab.1.bottom" timestamp="1670582202633">
@@ -373,6 +390,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="563" y="200" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670383301886" />
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1671181486437">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1671181486437" />
     <state x="1441" y="0" width="1057" height="544" maximized="true" key="dock-window-1" timestamp="1670580891807">
       <screen x="1440" y="0" width="1366" height="728" />
     </state>
@@ -381,10 +402,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="102" y="50" key="new project wizard/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670294322207" />
-    <state x="339" y="162" key="run.anything.popup" timestamp="1670920061450">
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup" timestamp="1671175763305">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1670920061450" />
+    <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1671175763305" />
     <state x="383" y="180" width="672" height="678" key="search.everywhere.popup" timestamp="1670485442272">
       <screen x="0" y="0" width="1440" height="860" />
     </state>

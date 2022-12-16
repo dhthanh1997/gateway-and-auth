@@ -1,16 +1,16 @@
 version: "3.7"
 services:
-  rabbitmq:
-    image: rabbitmq:3.11-management
-    hostname: rabbitmq
-    ports:
-      - 5673:5673
-      - 5672:5672
-      - 15672:15672
-    networks:
-      - microservices
-    depends_on:
-      - euruka
+#  rabbitmq:
+#    image: rabbitmq:3.11-management
+#    hostname: rabbitmq
+#    ports:
+#      - 5673:5673
+#      - 5672:5672
+#      - 15672:15672
+#    networks:
+#      - microservices
+#    depends_on:
+#      - euruka
   euruka:
     image: ansv-registry
     hostname: ansv-registry
@@ -28,7 +28,7 @@ services:
     networks:
       - microservices
     depends_on:
-      - rabbitmq
+      - euruka
   authorization:
     image: ansv-authorization
     hostname: ansv-authorization
