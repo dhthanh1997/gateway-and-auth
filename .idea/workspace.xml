@@ -29,8 +29,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +221,8 @@
       <workItem from="1671112607758" duration="639000" />
       <workItem from="1671173920903" duration="151000" />
       <workItem from="1671174852333" duration="1050000" />
-      <workItem from="1671176597352" duration="6491000" />
+      <workItem from="1671176597352" duration="7318000" />
+      <workItem from="1671211169022" duration="937000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
