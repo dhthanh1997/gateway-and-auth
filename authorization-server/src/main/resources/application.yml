@@ -1,15 +1,17 @@
 server:
   port: 8053
-  address: 172.19.0.2
+#  address: 172.19.0.2
 
 eureka:
   client:
     serviceUrl:
       #      defaultZone: http://localhost:8052/eureka/
-      defaultZone: http://172.19.0.2:8052/eureka/
+#      defaultZone: http://172.19.0.2:8052/eureka/
+      defaultZone: http://host.docker.internal:8052/eureka/
     register-with-eureka: true
   instance:
-    hostname: 172.19.0.2
+#    hostname: 172.19.0.2
+    hostname: host.docker.internal
 #    hostname: localhost
 spring:
   application:

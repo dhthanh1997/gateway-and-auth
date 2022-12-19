@@ -1,16 +1,18 @@
 server:
   port: 8055
-  address: 172.19.0.2
+#  address: 172.19.0.2
 
 eureka:
   client:
     serviceUrl:
       #      defaultZone: http://ansv-registry:8052/eureka/
       #      defaultZone: http://localhost:8052/eureka/
-      defaultZone: http://172.19.0.2:8052/eureka
+#      defaultZone: http://172.19.0.2:8052/eureka
+      defaultZone: http://host.docker.internal:8052/eureka
     register-with-eureka: true
   instance:
-    hostname: 172.19.0.2
+#    hostname: 172.19.0.2
+    hostname: host.docker.internal
   ##    hostname: ansv-registry
 #    hostname: localhost
 
@@ -38,20 +40,20 @@ spring:
             allowedHeaders: "*"
       routes:
         - id: app1
-          uri: http://172.19.0.2:8091
+          uri: http://host.docker.internal:8091
           predicates:
             - Path=/app1/**
         - id: app2
-          uri: http://172.19.0.2:8090
+          uri: http://host.docker.internal:8090
           predicates:
             - Path=/app2/**
         - id: task-management
-          uri: http://172.19.0.2:8092
+          uri: http://host.docker.internal:8092
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
         - id: authorization
-          uri: http://172.19.0.2:8053
+          uri: http://host.docker.internal:8053
           predicates:
             - Path=/authorization/**
             - Method=GET,POST,PUT,DELETE
