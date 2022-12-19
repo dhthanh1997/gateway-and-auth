@@ -50,10 +50,10 @@ spring:
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
-        - id: ansv-authorization
+        - id: authorization
           uri: http://172.19.0.2:8053
           predicates:
-            - Path=/ansv-authorization/**
+            - Path=/authorization/**
             - Method=GET,POST,PUT,DELETE
       httpserver:
         wiretap: true

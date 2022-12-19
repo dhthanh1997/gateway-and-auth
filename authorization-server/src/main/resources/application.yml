@@ -6,7 +6,7 @@ eureka:
   client:
     serviceUrl:
       #      defaultZone: http://localhost:8052/eureka/
-      defaultZone: http:// 172.19.0.2:8052/eureka/
+      defaultZone: http://172.19.0.2:8052/eureka/
     register-with-eureka: true
   instance:
     hostname: 172.19.0.2

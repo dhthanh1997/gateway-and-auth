@@ -15,3 +15,11 @@ eureka:
       #      defaultZone: http://ansv-registry:8052/eureka
       #      defaultZone: http://localhost:8052/eureka
       defaultZone: http://172.19.0.2:8052/eureka
+
+logging:
+  level:
+    root: debug
+  org:
+    springframework: debug
+  hibernate:
+    SQL: true
