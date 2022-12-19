@@ -1,6 +1,6 @@
 server:
   port: 8055
-#  address: 172.19.0.2
+  address: 172.19.0.2
 
 eureka:
   client:
