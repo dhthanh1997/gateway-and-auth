@@ -1,16 +1,15 @@
-
 server:
-    port: 8053
-    address: 172.19.0.2
+  port: 8053
+#    address: 172.19.0.2
 
 eureka:
   client:
     serviceUrl:
-#      defaultZone: http://localhost:8052/eureka/
-      defaultZone: http:// 172.19.0.2:8052/eureka/
+      defaultZone: http://localhost:8052/eureka/
+    #      defaultZone: http:// 172.19.0.2:8052/eureka/
     register-with-eureka: true
-#  instance:
-#    hostname: localhost
+  instance:
+    hostname: localhost
 
 spring:
   application:
@@ -39,9 +38,9 @@ spring:
   liquibase:
     enabled: false
   rabbitmq:
-    host: 172.17.0.2
-#    host: localhost
-#    host: host.docker.internal
+    #    host: 172.17.0.2
+    host: localhost
+    #    host: host.docker.internal
     port: 5672
     username: guest
     password: guest
@@ -59,26 +58,26 @@ logging:
   org:
     springframework: debug
   hibernate:
-      SQL: true
+    SQL: true
 
 
 #jwttoken
 app:
-    jwtSecret: 9a02115a835ee03d5fb83cd8a468ea33e4090aaaec87f53c9fa54512bbef4db8dc656c82a315fa0c785c08b0134716b81ddcd0153d2a7556f2e154912cf5675f
-    tokenValidity: 604800000
+  jwtSecret: 9a02115a835ee03d5fb83cd8a468ea33e4090aaaec87f53c9fa54512bbef4db8dc656c82a315fa0c785c08b0134716b81ddcd0153d2a7556f2e154912cf5675f
+  tokenValidity: 604800000
 
 
-#Rabbitmq properties
-#
-#
-#  spring.rabbitmq.hostName=localhost
-#  spring.rabbitmq.portNumber=15672
-#  spring.rabbitmq.username=guest
-#  spring.rabbitmq.password=guest
-#  spring.rabbitmq.virtualHost=/
-#  spring.rabbitmq.exchange=user.exchange
-#  spring.rabbitmq.routingkey=user.routingkey
-#  spring.rabbitmq.queue=user.queue
+  #Rabbitmq properties
+  #
+  #
+  #  spring.rabbitmq.hostName=localhost
+  #  spring.rabbitmq.portNumber=15672
+  #  spring.rabbitmq.username=guest
+  #  spring.rabbitmq.password=guest
+  #  spring.rabbitmq.virtualHost=/
+  #  spring.rabbitmq.exchange=user.exchange
+  #  spring.rabbitmq.routingkey=user.routingkey
+  #  spring.rabbitmq.queue=user.queue
 
 
 

@@ -1,16 +1,16 @@
 server:
   port: 8055
-  address: 172.19.0.2
+#  address: 172.19.0.2
 
 eureka:
   client:
     serviceUrl:
-#      defaultZone: http://ansv-registry:8052/eureka/
-#      defaultZone: http://localhost:8052/eureka/
-      defaultZone: http://172.19.0.2:8052/eureka
-#  instance:
-##    hostname: ansv-registry
-#    hostname: localhost
+      #      defaultZone: http://ansv-registry:8052/eureka/
+      defaultZone: http://localhost:8052/eureka/
+  #      defaultZone: http://172.19.0.2:8052/eureka
+  instance:
+    ##    hostname: ansv-registry
+    hostname: localhost
 spring:
   main:
     web-application-type: reactive
@@ -23,8 +23,8 @@ spring:
       #       host: localhost
       # port: 8888
       default-filters:
-      - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-      - AddResponseHeader=Access-Control-Allow-Origin, *
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - AddResponseHeader=Access-Control-Allow-Origin, *
       globalcors:
         add-to-simple-url-handler-mapping: true
         corsConfigurations:
@@ -47,7 +47,7 @@ spring:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
         - id: ansv-authorization
-          uri: http://ansv-authorization:8053
+          uri: http://localhost:8053
           predicates:
             - Path=/ansv-authorization/**
             - Method=GET,POST,PUT,DELETE
@@ -55,7 +55,7 @@ spring:
         wiretap: true
 logging:
   level:
-    reactor: 
+    reactor:
       netty: INFO
     org:
       springframework:
