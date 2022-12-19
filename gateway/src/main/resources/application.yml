@@ -38,20 +38,20 @@ spring:
             allowedHeaders: "*"
       routes:
         - id: app1
-          uri: http://localhost:8091
+          uri: http://172.19.0.2:8091
           predicates:
             - Path=/app1/**
         - id: app2
-          uri: http://localhost:8090
+          uri: http://172.19.0.2:8090
           predicates:
             - Path=/app2/**
         - id: task-management
-          uri: http://localhost:8092
+          uri: http://172.19.0.2:8092
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
         - id: ansv-authorization
-          uri: http://ansv-authorization:8053
+          uri: http://172.19.0.2:8053
           predicates:
             - Path=/ansv-authorization/**
             - Method=GET,POST,PUT,DELETE
