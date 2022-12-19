@@ -27,7 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,7 +226,7 @@
       <workItem from="1671211169022" duration="937000" />
       <workItem from="1671250592479" duration="1423000" />
       <workItem from="1671332838051" duration="1862000" />
-      <workItem from="1671415082048" duration="2192000" />
+      <workItem from="1671415082048" duration="3339000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>

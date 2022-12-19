@@ -1,5 +1,6 @@
 server:
     port: 8052
+    address: 172.19.0.2
 
 spring:
   application:
@@ -12,4 +13,5 @@ eureka:
     fetch-registry: false
     service-url:
 #      defaultZone: http://ansv-registry:8052/eureka
-      defaultZone: http://localhost:8052/eureka
+#      defaultZone: http://localhost:8052/eureka
+       defaultZone: http://172.19.0.2:8052/eureka

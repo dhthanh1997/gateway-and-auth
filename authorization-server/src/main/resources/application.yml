@@ -1,15 +1,16 @@
 
 server:
     port: 8053
+    address: 172.19.0.2
 
 eureka:
   client:
     serviceUrl:
-#      defaultZone: http://ansv-registry:8052/eureka/
-      defaultZone: http://localhost:8052/eureka/
+#      defaultZone: http://localhost:8052/eureka/
+      defaultZone: http:// 172.19.0.2:8052/eureka/
     register-with-eureka: true
-  instance:
-    hostname: localhost
+#  instance:
+#    hostname: localhost
 
 spring:
   application:
@@ -38,9 +39,9 @@ spring:
   liquibase:
     enabled: false
   rabbitmq:
-#    host: 172.17.0.2
+    host: 172.17.0.2
 #    host: localhost
-    host: host.docker.internal
+#    host: host.docker.internal
     port: 5672
     username: guest
     password: guest

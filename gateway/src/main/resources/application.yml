@@ -1,14 +1,16 @@
 server:
   port: 8055
+  address: 172.19.0.2
 
 eureka:
   client:
     serviceUrl:
 #      defaultZone: http://ansv-registry:8052/eureka/
-      defaultZone: http://localhost:8052/eureka/
-  instance:
-#    hostname: ansv-registry
-    hostname: localhost
+#      defaultZone: http://localhost:8052/eureka/
+      defaultZone: http://172.19.0.2:8052/eureka
+#  instance:
+##    hostname: ansv-registry
+#    hostname: localhost
 spring:
   main:
     web-application-type: reactive
