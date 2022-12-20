@@ -22,7 +22,7 @@ services:
     hostname: ansv-registry-service
     build: ./euruka
     ports:
-      - "8052:9052"
+      - "8052:8052"
     healthcheck:
       test: curl --fail http://localhost:9052 || exit 1
       interval: 60s
@@ -36,7 +36,7 @@ services:
     hostname: ansv-gateway
     build: ./gateway
     ports:
-      - "8055:9055"
+      - "8055:8055"
     healthcheck:
       test: curl --fail http://localhost:9055 || exit 1
       interval: 60s
@@ -52,7 +52,7 @@ services:
     hostname: ansv-authorization
     build: ./authorization-server
     ports:
-      - "8053:9053"
+      - "8053:8053"
     healthcheck:
       test: curl --fail http://localhost:9053 || exit 1
       interval: 60s
