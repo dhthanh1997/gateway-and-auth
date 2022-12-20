@@ -37,18 +37,18 @@ spring:
       ddl-auto: none
   liquibase:
     enabled: false
-  rabbitmq:
-    host: host.docker.internal
-    port: 6672
-    username: guest
-    password: guest
-    virtualHost: /
-    exchange: user.exchange
-    routingkey: user.routingkey
-    queue: user.queue
-    exchange-received: user-received.exchange
-    routingkey-received: user-received.routingkey
-    queue-received: user-received.queue
+#  rabbitmq:
+#    host: host.docker.internal
+#    port: 6672
+#    username: guest
+#    password: guest
+#    virtualHost: /
+#    exchange: user.exchange
+#    routingkey: user.routingkey
+#    queue: user.queue
+#    exchange-received: user-received.exchange
+#    routingkey-received: user-received.routingkey
+#    queue-received: user-received.queue
 
 logging:
   level:
