@@ -4,9 +4,9 @@ services:
     image: rabbitmq:3.11-management
     hostname: rabbitmq
     ports:
-      - 5673:6673
-      - 5672:6672
-      - 15672:16672
+      - 5673:5673
+      - 5672:5672
+      - 15672:15672
     networks:
       - microservices
     depends_on:
