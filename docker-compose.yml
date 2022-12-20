@@ -28,7 +28,7 @@ services:
     networks:
       - microservices
     depends_on:
-      - euruka
+      - rabbitmq
   authorization:
     image: ansv-authorization
     hostname: ansv-authorization
