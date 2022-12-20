@@ -25,7 +25,8 @@ spring:
   main:
     banner-mode: off
   datasource:
-    url: jdbc:postgresql://192.168.88.148:5432/Authorization
+#    url: jdbc:postgresql://192.168.88.148:5432/Authorization
+    url: jdbc:postgresql://192.168.1.6:5432/Authorization
     username: postgres
     password: root
   jpa:

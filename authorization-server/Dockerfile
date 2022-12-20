@@ -5,7 +5,7 @@ COPY src /app/src
 WORKDIR /app/
 RUN mvn clean compile
 RUN mvn liquibase:update
-RUN mvn clean test
+#RUN mvn clean test
 RUN mvn clean install
 
 
