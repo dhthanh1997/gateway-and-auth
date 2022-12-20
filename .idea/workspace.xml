@@ -27,7 +27,9 @@
   <component name="ChangeListManager">
     <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -281,9 +283,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="619" y="321" key="#Assign_Data_Sources/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670312969330" />
-    <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1670378348079">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="165" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1671522187553">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="165" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1671522187553" />
     <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670378348079" />
     <state x="478" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1670310872160">
       <screen x="0" y="0" width="1440" height="860" />

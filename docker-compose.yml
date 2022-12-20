@@ -70,6 +70,7 @@ services:
       - spring_rabbitmq_queue=detail.user.task-management.req.queue
     depends_on:
       - "rabbitmq"
+#      - "gateway"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
