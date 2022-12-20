@@ -10,7 +10,7 @@ services:
     networks:
       - microservices
     depends_on:
-      - euruka
+      - gateway
   euruka:
     image: ansv-registry-servive
     hostname: ansv-registry-service
@@ -28,7 +28,7 @@ services:
     networks:
       - microservices
     depends_on:
-      - rabbitmq
+      - euruka
   authorization:
     image: ansv-authorization
     hostname: ansv-authorization
@@ -45,7 +45,7 @@ services:
       - spring_rabbitmq_routingkey=detail.user.req
       - spring_rabbitmq_queue=detail.user.task-management.req.queue
     depends_on:
-      - gateway
+      - rabbitmq
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
