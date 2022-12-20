@@ -39,7 +39,7 @@ spring:
     enabled: false
   rabbitmq:
     host: rabbitmq
-    port: 5672
+    port: 6672
     username: guest
     password: guest
     virtualHost: /
