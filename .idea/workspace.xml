@@ -31,6 +31,7 @@
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/rabbitmq/RabbitMqReceiver.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/rabbitmq/RabbitMqReceiver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/rabbitmq/RabbitMqSender.java" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/service/impl/rabbitmq/RabbitMqSender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,6 +231,8 @@
       <workItem from="1671415082048" duration="7884000" />
       <workItem from="1671462573855" duration="1589000" />
       <workItem from="1671500375052" duration="1595000" />
+      <workItem from="1671529260422" duration="659000" />
+      <workItem from="1671543079730" duration="1565000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
