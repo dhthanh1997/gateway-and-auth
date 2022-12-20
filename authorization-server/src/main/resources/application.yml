@@ -1,18 +1,19 @@
 server:
   port: 8053
-  address: 172.19.0.2
+#  address: 172.19.0.2
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.19.0.2:8052/eureka/
+#      defaultZone: http://172.19.0.2:8052/eureka/
+      defaultZone: http://ansv-registry-service:8052/eureka/
     register-with-eureka: false
     fetch-registry: false
   instance:
-    hostname: 172.19.0.2
+    hostname: ansv-registry-service
 spring:
   application:
-    name: authorization
+    name: ansv-authorization
   ldap:
     server:
       base: CN=Users,DC=ansv,DC=vn

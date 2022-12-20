@@ -12,8 +12,8 @@ services:
 #    depends_on:
 #      - euruka
   euruka:
-    image: ansv-registry
-    hostname: ansv-registry
+    image: ansv-registry-servive
+    hostname: ansv-registry-service
     build: ./euruka
     ports:
       - "8052:8052"
