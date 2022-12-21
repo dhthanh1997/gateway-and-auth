@@ -28,12 +28,8 @@
     <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="up">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euruka/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euruka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euruka/src/main/java/com/ansv/euruka/EurukaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/src/main/java/com/ansv/eureka/EurekaApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euruka/src/test/java/com/ansv/euruka/EurukaApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/src/test/java/com/ansv/eureka/EurukaApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -235,7 +231,7 @@
       <workItem from="1671500375052" duration="1595000" />
       <workItem from="1671529260422" duration="659000" />
       <workItem from="1671543079730" duration="3915000" />
-      <workItem from="1671587150300" duration="863000" />
+      <workItem from="1671587150300" duration="1270000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
