@@ -25,7 +25,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="up" />
+    <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="up">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -227,6 +230,7 @@
       <workItem from="1671529260422" duration="659000" />
       <workItem from="1671543079730" duration="3915000" />
       <workItem from="1671587150300" duration="1270000" />
+      <workItem from="1671692922284" duration="5851000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>

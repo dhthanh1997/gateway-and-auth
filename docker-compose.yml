@@ -75,6 +75,8 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - microservices
+
+
 networks:
   microservices:
     name: microservices
