@@ -5,12 +5,19 @@ server:
 eureka:
   client:
     serviceUrl:
-      #      defaultZone: http://ansv-registry:8052/eureka/
-      defaultZone: http://localhost:8052/eureka/
-  #      defaultZone: http://172.19.0.2:8052/eureka
+      defaultZone: http://ansv-registry-service:8052/eureka/
+      #      defaultZone: http://localhost:8052/eureka/
+    #      defaultZone: http://172.19.0.2:8052/eureka
+    #      defaultZone: http://host.docker.internal:8052/eureka
+    register-with-eureka: false
+    fetch-registry: false
   instance:
-    ##    hostname: ansv-registry
-    hostname: localhost
+    #    hostname: 172.19.0.2
+    #    hostname: host.docker.internal
+    hostname: ansv-registry-service
+#    hostname: localhost
+
+
 spring:
   main:
     web-application-type: reactive
@@ -34,22 +41,22 @@ spring:
             allowedHeaders: "*"
       routes:
         - id: app1
-          uri: http://localhost:8091
+          uri: http://host.docker.internal:8091
           predicates:
             - Path=/app1/**
         - id: app2
-          uri: http://localhost:8090
+          uri: http://host.docker.internal:8090
           predicates:
             - Path=/app2/**
         - id: task-management
-          uri: http://localhost:8092
+          uri: http://host.docker.internal:8092
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
-        - id: ansv-authorization
-          uri: http://localhost:8053
+        - id: authorization
+          uri: http://host.docker.internal:8053
           predicates:
-            - Path=/ansv-authorization/**
+            - Path=/authorization/**
             - Method=GET,POST,PUT,DELETE
       httpserver:
         wiretap: true
