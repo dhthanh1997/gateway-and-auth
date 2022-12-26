@@ -18,7 +18,7 @@ services:
     ports:
       - "8052:8052"
     healthcheck:
-      test: curl --fail http://ansv-registry-service:8052 || exit 1
+      test: curl --fail http://host.docker.internal:8052 || exit 1
       interval: 60s
       retries: 5
       start_period: 20s
@@ -32,7 +32,7 @@ services:
     ports:
       - "8055:8055"
     healthcheck:
-      test: curl --fail http://ansv-gateway:8052 || exit 1
+      test: curl --fail http://host.docker.internal:8052 || exit 1
       interval: 60s
       retries: 5
       start_period: 20s
@@ -48,7 +48,7 @@ services:
     ports:
       - "8053:8053"
     healthcheck:
-      test: curl --fail http://ansv-authorization:8052 || exit 1
+      test: curl --fail http://host.docker.internal:8052 || exit 1
       interval: 60s
       retries: 5
       start_period: 20s
