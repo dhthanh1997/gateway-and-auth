@@ -20,8 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/liquibase.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
