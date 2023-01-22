@@ -24,7 +24,8 @@ spring:
        base: dc=springframework,dc=org
     authen:
 #      url: ldap://172.24.104.6:389
-      url: ldap://localhost:8389
+#      url: ldap://localhost:8389
+      url: ldap://192.168.1.4:8389
 #      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
       managerDn: uid=admin,ou=people,dc=springframework,dc=org
       managerPassword: 123456
@@ -33,7 +34,8 @@ spring:
   main:
     banner-mode: off
   datasource:
-    url: jdbc:postgresql://localhost:5432/Authorization
+#    url: jdbc:postgresql://localhost:5432/Authorization
+    url: jdbc:postgresql://192.168.1.4:5432/Authorization
     username: postgres
     password: root
   jpa:
