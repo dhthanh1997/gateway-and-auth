@@ -19,6 +19,8 @@ spring:
       ldif: classpath:test-server.ldif
       base-dn: dc=springframework,dc=org
       port: 8389
+      validation:
+        enabled: false
     server:
 #      base: CN=Users,DC=ansv,DC=vn
        base: dc=springframework,dc=org
@@ -26,9 +28,11 @@ spring:
 #      url: ldap://172.24.104.6:389
 #      url: ldap://localhost:8389
       url: ldap://192.168.1.4:8389
+      base: dc=springframework,dc=org
 #      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
       managerDn: uid=admin,ou=people,dc=springframework,dc=org
-      managerPassword: 123456
+      managerPassword: $2a$10$xgMeNxDvGTeI2u/MwPqKV.oIq8O1OeDEhcy8k19V.dTvLpWe88xRS
+      dn-patterns: uid={0},ou=people,dc=springframework,dc=org
       filter: uid
       password: userPassword
   main:
