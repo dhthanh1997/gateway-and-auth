@@ -1,0 +1,79 @@
+server:
+  port: 8053
+#  address: 172.19.0.2
+
+eureka:
+  client:
+    serviceUrl:
+#      defaultZone: http://172.19.0.2:8052/eureka/
+      defaultZone: http://ansv-registry-service:8052/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: ansv-registry-service
+spring:
+  application:
+    name: ansv-authorization
+  ldap:
+    embedded:
+      ldif: classpath:test-server.ldif
+      base-dn: dc=springframework,dc=org
+      port: 8389
+    server:
+#      base: CN=Users,DC=ansv,DC=vn
+       base: dc=springframework,dc=org
+    authen:
+#      url: ldap://172.24.104.6:389
+      url: ldap://localhost:8389
+#      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
+      managerDn: uid=admin,ou=people,dc=springframework,dc=org
+      managerPassword: 123456
+      filter: uid
+      password: userPassword
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:postgresql://localhost:5432/Authorization
+    username: postgres
+    password: root
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    enabled: false
+  rabbitmq:
+    host: 172.17.0.2
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    exchange: user.exchange
+    routingkey: user.routingkey
+    queue: user.queue
+    exchange-received: user-received.exchange
+    routingkey-received: user-received.routingkey
+    queue-received: user-received.queue
+
+logging:
+  level:
+    root: debug
+  org:
+    springframework: debug
+  hibernate:
+    SQL: true
+
+
+#jwttoken
+app:
+  jwtSecret: 9a02115a835ee03d5fb83cd8a468ea33e4090aaaec87f53c9fa54512bbef4db8dc656c82a315fa0c785c08b0134716b81ddcd0153d2a7556f2e154912cf5675f
+  tokenValidity: 604800000
+
+
+
+
+    
+

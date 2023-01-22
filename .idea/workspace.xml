@@ -19,16 +19,12 @@
     <select>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="up">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-    </list>
+    <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -74,17 +70,17 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources\db\changelog" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ansv.authorizationserver.rabbitmq" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources" />
       <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\gateway" />
       <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\java\com\ansv\authorizationserver\service\impl" />
       <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources\db.changelog" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.ansv.authorizationserver.rabbitmq" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources\db\changelog" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -258,19 +254,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="main" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
