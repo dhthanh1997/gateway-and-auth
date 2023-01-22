@@ -15,17 +15,25 @@ spring:
   application:
     name: ansv-authorization
   ldap:
+    embedded:
+      ldif: classpath:test-server.ldif
+      base-dn: dc=springframework,dc=org
+      port: 8389
     server:
-      base: CN=Users,DC=ansv,DC=vn
+#      base: CN=Users,DC=ansv,DC=vn
+       base: dc=springframework,dc=org
     authen:
-      url: ldap://172.24.104.6:389
-      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
+#      url: ldap://172.24.104.6:389
+      url: ldap://localhost:8389
+#      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
+      managerDn: uid=admin,ou=people,dc=springframework,dc=org
       managerPassword: 123456
-      filter: userPrincipalName
+      filter: uid
+      password: userPassword
   main:
     banner-mode: off
   datasource:
-    url: jdbc:postgresql://192.168.88.148:5432/Authorization
+    url: jdbc:postgresql://localhost:5432/Authorization
     username: postgres
     password: root
   jpa:
@@ -38,7 +46,7 @@ spring:
   liquibase:
     enabled: false
   rabbitmq:
-    host: 172.17.0.7
+    host: 172.17.0.2
     port: 5672
     username: guest
     password: guest

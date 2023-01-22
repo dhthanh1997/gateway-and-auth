@@ -20,7 +20,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/authorization-server/DockerfileDev" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/test-server.ldif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +42,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="ProjectId" id="2IWNkjKaWcMpdYj7byVzFsZjH6d" />
   <component name="ProjectLevelVcsManager">
@@ -58,7 +66,7 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/authorization-server/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/authorization-server" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Docker" />
@@ -74,6 +82,7 @@
       <recent name="com.ansv.authorizationserver.rabbitmq" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server" />
       <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources" />
       <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\gateway" />
       <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\java\com\ansv\authorizationserver\service\impl" />
@@ -189,7 +198,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="" />
+      <changelist id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="" />
       <created>1670293524402</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -220,6 +229,10 @@
       <workItem from="1671415082048" duration="7884000" />
       <workItem from="1671462573855" duration="1589000" />
       <workItem from="1671500375052" duration="1595000" />
+      <workItem from="1672125602244" duration="1063000" />
+      <workItem from="1673169553112" duration="4964000" />
+      <workItem from="1673329565459" duration="1088000" />
+      <workItem from="1674372950873" duration="1383000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -278,10 +291,11 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670378348079" />
-    <state x="478" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1670310872160">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="637" y="281" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1674374332972">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="478" y="232" key="#com.intellij.fileTypes.FileTypeChooser/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670310872160" />
+    <state x="637" y="281" key="#com.intellij.fileTypes.FileTypeChooser/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1674374332972" />
     <state x="525" y="136" key="#com.intellij.ide.util.MemberChooser" timestamp="1670485044259">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
