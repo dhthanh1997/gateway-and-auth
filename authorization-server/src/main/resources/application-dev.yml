@@ -54,7 +54,8 @@ spring:
   liquibase:
     enabled: false
   rabbitmq:
-    host: 172.17.0.2
+    host: host.docker.internal
+#    host: 172.17.0.2
     port: 5672
     username: guest
     password: guest
