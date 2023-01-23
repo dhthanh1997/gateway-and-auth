@@ -6,8 +6,8 @@ eureka:
   client:
     serviceUrl:
 #      defaultZone: http://172.19.0.2:8052/eureka/
-#      defaultZone: http://ansv-registry-service:8052/eureka/
-      defaultZone: http://172.22.0.2:8052/eureka/
+      defaultZone: http://ansv-registry-service:8052/eureka/
+#      defaultZone: http://172.22.0.2:8052/eureka/
     register-with-eureka: false
     fetch-registry: false
   instance:

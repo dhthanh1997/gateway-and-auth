@@ -6,7 +6,7 @@ WORKDIR /app/
 RUN mvn clean compile
 RUN mvn liquibase:update
 #RUN mvn clean test
-RUN mvn clean install
+RUN mvn clean install -P dev
 
 
 ### STAGE 2: DEPLOY APP
