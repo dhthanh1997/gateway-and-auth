@@ -12,10 +12,10 @@ eureka:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-#      defaultZone: http://ansv-registry-service:8052/eureka/
+      defaultZone: http://ansv-registry-service:8052/eureka/
 #      defaultZone: http://localhost:8052/eureka/
 #      defaultZone: http://172.22.0.2:8052/eureka/
-      defaultZone: http://host.docker.internal:8052/eureka/
+#      defaultZone: http://host.docker.internal:8052/eureka/
 
 logging:
   level:
