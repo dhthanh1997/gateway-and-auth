@@ -29,7 +29,7 @@ spring:
     authen:
 #      url: ldap://172.24.104.6:389
 #      url: ldap://localhost:8389
-      url: ldap://192.168.1.4:8389
+      url: ldap://host.docker.internal:8389
       base: dc=springframework,dc=org
 #      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
       managerDn: uid=admin,ou=people,dc=springframework,dc=org
