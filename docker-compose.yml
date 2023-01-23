@@ -54,7 +54,7 @@ services:
       start_period: 20s
       timeout: 10s
     environment:
-      - spring_rabbitmq_host=172.17.0.2
+      - spring_rabbitmq_host=host.docker.internal
       - spring_rabbitmq_port=5672
       - spring_rabbitmq_username=guest
       - spring_rabbitmq_password=guest
