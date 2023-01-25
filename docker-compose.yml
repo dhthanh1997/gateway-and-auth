@@ -62,6 +62,9 @@ services:
       - spring_rabbitmq_exchange=task-management.req.events
       - spring_rabbitmq_routingkey=detail.user.req
       - spring_rabbitmq_queue=detail.user.task-management.req.queue
+      - spring_rabbitmq_exchange-received=user-received.exchange
+      - spring_rabbitmq_routingkey-received=user-received.routingkey
+      - spring_rabbitmq_queue-received=user-received.queue
     depends_on:
       - gateway
     volumes:

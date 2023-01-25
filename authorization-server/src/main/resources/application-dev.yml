@@ -54,15 +54,15 @@ spring:
   liquibase:
     enabled: false
   rabbitmq:
-#    host: host.docker.internal
-    host: 172.17.0.2
+    host: host.docker.internal
+#    host: 172.17.0.2
     port: 5672
     username: guest
     password: guest
     virtualHost: /
-    exchange: user.exchange
-    routingkey: user.routingkey
-    queue: user.queue
+    exchange: task-management.req.events
+    routingkey: detail.user.req
+    queue: detail.user.task-management.req.queue
     exchange-received: user-received.exchange
     routingkey-received: user-received.routingkey
     queue-received: user-received.queue
