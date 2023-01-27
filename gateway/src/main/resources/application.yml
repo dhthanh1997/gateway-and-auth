@@ -9,8 +9,8 @@ eureka:
       #            defaultZone: http://localhost:8052/eureka/
       #      defaultZone: http://172.18.0.3:8052/eureka/
     #      defaultZone: http://host.docker.internal:8052/eureka/
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
     #  instance:
     #    hostname: 172.18.0.3
     #    hostname: host.docker.internal
