@@ -1,12 +1,10 @@
 server:
   port: 8052
-  address: 172.18.0.2
+#  address: 172.18.0.2
 
 spring:
   application:
     name: ansv-registry-service
-
-
 
 eureka:
   client:
