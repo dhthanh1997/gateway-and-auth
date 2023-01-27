@@ -12,8 +12,8 @@ eureka:
 #      defaultZone: http://172.18.0.3:8052/eureka/
     register-with-eureka: true
     fetch-registry: true
-#  instance:
-#    hostname: ansv-registry-service
+  instance:
+    hostname: ansv-registry-service
 spring:
   application:
     name: ansv-authorization

@@ -11,10 +11,10 @@ eureka:
     #      defaultZone: http://host.docker.internal:8052/eureka/
     register-with-eureka: true
     fetch-registry: true
-    #  instance:
+  instance:
     #    hostname: 172.18.0.3
     #    hostname: host.docker.internal
-#    hostname: ansv-registry-service
+    hostname: ansv-registry-service
 #    hostname: localhost
 
 
