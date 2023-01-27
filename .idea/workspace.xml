@@ -28,7 +28,6 @@
     <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +263,7 @@
       <workItem from="1674530064416" duration="3350000" />
       <workItem from="1674617213685" duration="8196000" />
       <workItem from="1674705758424" duration="2983000" />
-      <workItem from="1674782992882" duration="6268000" />
+      <workItem from="1674782992882" duration="8120000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -358,10 +357,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="391" height="466" key="DebuggerActiveHint/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670581482784" />
-    <state x="264" y="110" width="1662" height="778" key="DiffContextDialog" timestamp="1674466421539">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1674793062850">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1672024957230" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1674793062850" />
     <state x="264" y="110" width="1662" height="778" key="DiffContextDialog/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1674466421539" />
     <state x="500" y="131" key="FileChooserDialogImpl" timestamp="1670294382359">
       <screen x="0" y="0" width="1440" height="860" />
