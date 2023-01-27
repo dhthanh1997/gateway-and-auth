@@ -1,20 +1,20 @@
 server:
   port: 8055
-#  address: 172.19.0.2
+#  address: 172.18.0.2
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://ansv-registry-service:8052/eureka/
-      #      defaultZone: http://localhost:8052/eureka/
-      #          defaultZone: http://172.22.0.2:8052/eureka
+#            defaultZone: http://ansv-registry-service:8052/eureka/
+      #            defaultZone: http://localhost:8052/eureka/
+      defaultZone: http://172.18.0.2:8052/eureka
     #      defaultZone: http://host.docker.internal:8052/eureka/
-    register-with-eureka: false
-    fetch-registry: false
+    register-with-eureka: true
+    fetch-registry: true
   instance:
-    #    hostname: 172.22.0.2
-#    hostname: host.docker.internal
-    hostname: ansv-registry-service
+    hostname: 172.22.0.2
+    #    hostname: host.docker.internal
+#    hostname: ansv-registry-service
 #    hostname: localhost
 
 
