@@ -28,7 +28,7 @@
     <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -264,7 +264,7 @@
       <workItem from="1674530064416" duration="3350000" />
       <workItem from="1674617213685" duration="8196000" />
       <workItem from="1674705758424" duration="2983000" />
-      <workItem from="1674782992882" duration="5437000" />
+      <workItem from="1674782992882" duration="6268000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -464,9 +464,10 @@
       <screen x="1440" y="0" width="1366" height="728" />
     </state>
     <state x="1441" y="0" width="1057" height="544" maximized="true" key="dock-window-1/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670580891807" />
-    <state x="667" y="119" width="585" height="801" key="find.popup" timestamp="1674669780883">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="475" y="83" width="555" height="561" key="find.popup" timestamp="1674791716603">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="475" y="83" width="555" height="561" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1674791716603" />
     <state x="667" y="119" width="585" height="801" key="find.popup/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1674669780883" />
     <state x="102" y="50" key="new project wizard" timestamp="1670294322207">
       <screen x="0" y="0" width="1440" height="860" />
