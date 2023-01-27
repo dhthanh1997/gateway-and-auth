@@ -7,7 +7,7 @@ eureka:
     serviceUrl:
 #      defaultZone: http://172.18.0.2:8052/eureka/
 #      defaultZone: http://localhost:8052/eureka/
-      defaultZone: http://ansv-registry-service:8052/eureka/
+      defaultZone: http://ansv-registry-service:8052/eureka
 #      defaultZone: http://host.docker.internal:8052/eureka/
 #      defaultZone: http://172.18.0.3:8052/eureka/
     register-with-eureka: true
