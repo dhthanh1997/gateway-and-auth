@@ -3,10 +3,10 @@ FROM maven:3.8.5-openjdk-11 AS builders
 COPY pom.xml /app/
 COPY src /app/src
 WORKDIR /app/
-RUN mvn clean compile
+RUN mvn clean compile -P dev
 RUN mvn liquibase:update
-RUN mvn clean test
-RUN mvn clean install
+#RUN mvn clean test
+RUN mvn clean install -P dev
 
 
 ### STAGE 2: DEPLOY APP

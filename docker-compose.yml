@@ -12,11 +12,17 @@ services:
 #    depends_on:
 #      - euruka
   euruka:
-    image: ansv-registry
-    hostname: ansv-registry
+    image: ansv-registry-servive
+    hostname: ansv-registry-service
     build: ./euruka
     ports:
       - "8052:8052"
+    healthcheck:
+      test: curl --fail http://host.docker.internal:8052 || exit 1
+      interval: 60s
+      retries: 5
+      start_period: 20s
+      timeout: 10s
     networks:
       - microservices
   gateway:
@@ -25,6 +31,12 @@ services:
     build: ./gateway
     ports:
       - "8055:8055"
+    healthcheck:
+      test: curl --fail http://host.docker.internal:8055 || exit 1
+      interval: 60s
+      retries: 5
+      start_period: 20s
+      timeout: 10s
     networks:
       - microservices
     depends_on:
@@ -35,8 +47,14 @@ services:
     build: ./authorization-server
     ports:
       - "8053:8053"
+    healthcheck:
+      test: curl --fail http://host.docker.internal:8053 || exit 1
+      interval: 60s
+      retries: 5
+      start_period: 20s
+      timeout: 10s
     environment:
-      - spring_rabbitmq_host=172.17.0.2
+      - spring_rabbitmq_host=host.docker.internal
       - spring_rabbitmq_port=5672
       - spring_rabbitmq_username=guest
       - spring_rabbitmq_password=guest
@@ -44,6 +62,9 @@ services:
       - spring_rabbitmq_exchange=task-management.req.events
       - spring_rabbitmq_routingkey=detail.user.req
       - spring_rabbitmq_queue=detail.user.task-management.req.queue
+      - spring_rabbitmq_exchange-received=user-received.exchange
+      - spring_rabbitmq_routingkey-received=user-received.routingkey
+      - spring_rabbitmq_queue-received=user-received.queue
     depends_on:
       - gateway
     volumes:

@@ -20,12 +20,15 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:prod-microservice" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="up" />
+    <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/Dockerfile" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,6 +44,32 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="dev_deploy" />
+                    <option name="lastUsedInstant" value="1674377606" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="dev" />
+                    <option name="lastUsedInstant" value="1674377605" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="ProjectId" id="2IWNkjKaWcMpdYj7byVzFsZjH6d" />
   <component name="ProjectLevelVcsManager">
@@ -168,7 +197,7 @@
     </configuration>
     <configuration name="EurukaApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="euruka" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ansv.euruka.EurukaApplication" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.ansv.eureka.EurekaApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -193,7 +222,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="" />
+      <changelist id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml" />
       <created>1670293524402</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -223,7 +252,18 @@
       <workItem from="1671332838051" duration="1862000" />
       <workItem from="1671415082048" duration="7884000" />
       <workItem from="1671462573855" duration="1589000" />
-      <workItem from="1671500375052" duration="2967000" />
+      <workItem from="1671500375052" duration="1595000" />
+      <workItem from="1671529260422" duration="659000" />
+      <workItem from="1671543079730" duration="3915000" />
+      <workItem from="1671587150300" duration="1270000" />
+      <workItem from="1671692922284" duration="5851000" />
+      <workItem from="1672023720399" duration="834000" />
+      <workItem from="1674451401571" duration="10350000" />
+      <workItem from="1674530064416" duration="3350000" />
+      <workItem from="1674617213685" duration="8196000" />
+      <workItem from="1674705758424" duration="2983000" />
+      <workItem from="1674782992882" duration="17532000" />
+      <workItem from="1674878167568" duration="4647000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -239,7 +279,21 @@
       <option name="project" value="LOCAL" />
       <updated>1670915922242</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="up">
+      <created>1674462830087</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674462830087</updated>
+    </task>
+    <task id="LOCAL-00004" summary="up">
+      <created>1674784530934</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674784530934</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -256,7 +310,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="main" />
+                        <option value="prod-microservice" />
                       </list>
                     </value>
                   </entry>
@@ -278,9 +332,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="619" y="321" key="#Assign_Data_Sources/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670312969330" />
-    <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1670378348079">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state x="165" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1671522187553">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="165" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1671522187553" />
     <state x="174" y="85" key="#com.intellij.execution.impl.EditConfigurationsDialog/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670378348079" />
     <state x="478" y="232" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1670310872160">
       <screen x="0" y="0" width="1440" height="860" />
@@ -294,10 +349,19 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="221" y="354" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670485298087" />
+    <state x="404" y="108" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1671587888787">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="404" y="108" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1671587888787" />
     <state width="391" height="466" key="DebuggerActiveHint" timestamp="1670581482784">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="391" height="466" key="DebuggerActiveHint/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670581482784" />
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1674810971259">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1674810971259" />
+    <state x="264" y="110" width="1662" height="778" key="DiffContextDialog/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1674466421539" />
     <state x="500" y="131" key="FileChooserDialogImpl" timestamp="1670294382359">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -378,10 +442,11 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1670836127213" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1670915929818">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1674784537306">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1670915929818" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1674784537306" />
+    <state x="387" y="139" key="Vcs.Push.Dialog.v2/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1674462835311" />
     <state width="728" height="438" key="XDebugger.FullValuePopup" timestamp="1670386879827">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
@@ -398,6 +463,11 @@
       <screen x="1440" y="0" width="1366" height="728" />
     </state>
     <state x="1441" y="0" width="1057" height="544" maximized="true" key="dock-window-1/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670580891807" />
+    <state x="475" y="83" width="555" height="561" key="find.popup" timestamp="1674809934931">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="475" y="83" width="555" height="561" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1674809934931" />
+    <state x="667" y="119" width="585" height="801" key="find.popup/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1674669780883" />
     <state x="102" y="50" key="new project wizard" timestamp="1670294322207">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
