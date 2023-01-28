@@ -1,13 +1,27 @@
 server:
-    port: 8052
+  port: 8052
+#  address: 172.18.0.3
 
 spring:
   application:
-    name: eureka-server
+    name: ansv-registry-service
 
 eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://localhost:8052/eureka
+      defaultZone: http://ansv-registry-service:8052/eureka
+#      defaultZone: http://localhost:8052/eureka/
+#      defaultZone: http://172.18.0.3:8052/eureka/
+#      defaultZone: http://host.docker.internal:8052/eureka/
+#  instance:
+#    hostname: ansv-registry-service
+
+logging:
+  level:
+    root: debug
+  org:
+    springframework: debug
+  hibernate:
+    SQL: true

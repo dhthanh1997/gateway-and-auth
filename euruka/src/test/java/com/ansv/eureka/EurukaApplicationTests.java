@@ -1,4 +1,4 @@
-package com.ansv.euruka;
+package com.ansv.eureka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
