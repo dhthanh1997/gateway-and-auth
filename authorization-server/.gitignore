@@ -15,6 +15,7 @@ target/
 
 ### IntelliJ IDEA ###
 .idea
+authorization-server/.idea
 *.iws
 *.iml
 *.ipr
