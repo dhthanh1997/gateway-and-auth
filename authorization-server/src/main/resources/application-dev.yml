@@ -6,7 +6,8 @@ eureka:
   client:
     serviceUrl:
 #      defaultZone: http://172.19.0.2:8052/eureka/
-      defaultZone: http://ansv-registry-service:8052/eureka/
+#      defaultZone: http://ansv-registry-service:8052/eureka/
+      defaultZone: http://localhost:8052/eureka/
     register-with-eureka: false
     fetch-registry: false
   instance:
@@ -24,7 +25,7 @@ spring:
        base: dc=springframework,dc=org
     authen:
 #      url: ldap://172.24.104.6:389
-      url: ldap://localhost:8389
+#      url: ldap://localhost:8389
 #      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
       managerDn: uid=admin,ou=people,dc=springframework,dc=org
       managerPassword: 123456

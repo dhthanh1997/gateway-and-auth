@@ -20,14 +20,22 @@
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="BRANCH:prod-microservice" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:gateway" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="">
+    <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml">
+      <change afterPath="$PROJECT_DIR$/euruka/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/euruka/src/main/resources/application-staging.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-staging.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/authorization-server/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/euruka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,13 +45,16 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="2" />
   </component>
   <component name="ProjectId" id="2IWNkjKaWcMpdYj7byVzFsZjH6d" />
   <component name="ProjectLevelVcsManager">
@@ -65,8 +76,11 @@
     <property name="TERMINAL_CUSTOM_COMMANDS_GOT_IT" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/authorization-server/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/euruka/src/main/resources" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="Docker" />
   </component>
@@ -74,17 +88,18 @@
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources\db\changelog" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\euruka\src\main\resources" />
+      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\gateway\src\main\resources" />
+      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources" />
+      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\gateway" />
+      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\java\com\ansv\authorizationserver\service\impl" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ansv.authorizationserver.rabbitmq" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources" />
-      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\gateway" />
-      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\java\com\ansv\authorizationserver\service\impl" />
-      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources\db.changelog" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Working\ansv\InternalApp\back-end\gateway-and-auth\authorization-server\src\main\resources\db\changelog" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -196,7 +211,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="02352f12-f348-4493-a945-96d83eea08e9" name="Default Changelist" comment="" />
+      <changelist id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml" />
       <created>1670293524402</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -232,6 +247,7 @@
       <workItem from="1671587150300" duration="1270000" />
       <workItem from="1671692922284" duration="5851000" />
       <workItem from="1672023720399" duration="834000" />
+      <workItem from="1676905334862" duration="2329000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -264,7 +280,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="prod-microservice" />
+                        <option value="gateway" />
                       </list>
                     </value>
                   </entry>
@@ -286,6 +302,10 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="619" y="321" key="#Assign_Data_Sources/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670312969330" />
+    <state x="440" y="94" key="#Project_Structure" timestamp="1676904476900">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="#Project_Structure/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676904476900" />
     <state x="165" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1671522187553">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -311,79 +331,79 @@
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state width="391" height="466" key="DebuggerActiveHint/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670581482784" />
-    <state x="129" y="131" width="1662" height="778" key="DiffContextDialog" timestamp="1674377477523">
+    <state x="129" y="131" width="1662" height="778" key="DiffContextDialog" timestamp="1676905250952">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1672024957230" />
-    <state x="129" y="131" width="1662" height="778" key="DiffContextDialog/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1674377477523" />
+    <state x="129" y="131" width="1662" height="778" key="DiffContextDialog/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676905250952" />
     <state x="500" y="131" key="FileChooserDialogImpl" timestamp="1670294382359">
       <screen x="0" y="0" width="1440" height="860" />
     </state>
     <state x="500" y="131" key="FileChooserDialogImpl/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670294382359" />
-    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1671175917307">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1522" height="223" key="GridCell.Tab.0.bottom" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1671175917307" />
     <state width="1127" height="343" key="GridCell.Tab.0.bottom/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202632" />
-    <state width="1454" height="422" key="GridCell.Tab.0.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1671175917307">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1522" height="223" key="GridCell.Tab.0.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.0.center" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1671175917307" />
     <state width="1127" height="343" key="GridCell.Tab.0.center/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202632" />
-    <state width="1454" height="422" key="GridCell.Tab.0.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1671175917307">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1522" height="223" key="GridCell.Tab.0.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.0.left" timestamp="1676912275143">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1671175917307" />
     <state width="1127" height="343" key="GridCell.Tab.0.left/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202632" />
-    <state width="1454" height="422" key="GridCell.Tab.0.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1671175917307">
-      <screen x="0" y="0" width="1366" height="728" />
+    <state width="1522" height="223" key="GridCell.Tab.0.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275143" />
+    <state width="1522" height="223" key="GridCell.Tab.0.right" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1671175917307" />
     <state width="1127" height="343" key="GridCell.Tab.0.right/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202632" />
-    <state width="1454" height="422" key="GridCell.Tab.0.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1127" height="343" key="GridCell.Tab.1.bottom" timestamp="1670582202633">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1522" height="223" key="GridCell.Tab.0.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.1.bottom" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1127" height="343" key="GridCell.Tab.1.bottom/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202633" />
-    <state width="1454" height="422" key="GridCell.Tab.1.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212942" />
-    <state width="1127" height="343" key="GridCell.Tab.1.center" timestamp="1670582202633">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1522" height="223" key="GridCell.Tab.1.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.1.center" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1127" height="343" key="GridCell.Tab.1.center/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202633" />
-    <state width="1454" height="422" key="GridCell.Tab.1.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1127" height="343" key="GridCell.Tab.1.left" timestamp="1670582202633">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1522" height="223" key="GridCell.Tab.1.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.1.left" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1127" height="343" key="GridCell.Tab.1.left/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202633" />
-    <state width="1454" height="422" key="GridCell.Tab.1.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212941" />
-    <state width="1127" height="343" key="GridCell.Tab.1.right" timestamp="1670582202633">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1522" height="223" key="GridCell.Tab.1.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.1.right" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1127" height="343" key="GridCell.Tab.1.right/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202633" />
-    <state width="1454" height="422" key="GridCell.Tab.1.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212942" />
-    <state width="1127" height="343" key="GridCell.Tab.2.bottom" timestamp="1670582202634">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1522" height="223" key="GridCell.Tab.1.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.2.bottom" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1127" height="343" key="GridCell.Tab.2.bottom/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202634" />
-    <state width="1454" height="422" key="GridCell.Tab.2.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212943" />
-    <state width="1127" height="343" key="GridCell.Tab.2.center" timestamp="1670582202633">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1522" height="223" key="GridCell.Tab.2.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.2.center" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1127" height="343" key="GridCell.Tab.2.center/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202633" />
-    <state width="1454" height="422" key="GridCell.Tab.2.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212942" />
-    <state width="1127" height="343" key="GridCell.Tab.2.left" timestamp="1670582202633">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1522" height="223" key="GridCell.Tab.2.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.2.left" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1127" height="343" key="GridCell.Tab.2.left/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202633" />
-    <state width="1454" height="422" key="GridCell.Tab.2.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212942" />
-    <state width="1127" height="343" key="GridCell.Tab.2.right" timestamp="1670582202634">
-      <screen x="0" y="0" width="1440" height="860" />
+    <state width="1522" height="223" key="GridCell.Tab.2.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
+    <state width="1522" height="223" key="GridCell.Tab.2.right" timestamp="1676912275144">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1127" height="343" key="GridCell.Tab.2.right/1440.0.1366.728/0.0.1440.860@0.0.1440.860" timestamp="1670582202634" />
-    <state width="1454" height="422" key="GridCell.Tab.2.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1670520212943" />
+    <state width="1522" height="223" key="GridCell.Tab.2.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676912275144" />
     <state x="129" y="55" key="MergeDialog" timestamp="1670835413321">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

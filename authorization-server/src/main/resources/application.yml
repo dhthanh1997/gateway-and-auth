@@ -5,13 +5,14 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.22.0.2:8052/eureka/
+#      defaultZone: http://172.22.0.2:8052/eureka/
+          defaultZone: http://localhost:8052/eureka/
     #      defaultZone: http://ansv-registry-service:8052/eureka/
     #      defaultZone: http://host.docker.internal:8052/eureka/
     register-with-eureka: true
     fetch-registry: true
   instance:
-    hostname: 172.22.0.2
+#    hostname: 172.22.0.2
 #    hostname: ansv-registry-service
 spring:
   application:
@@ -20,7 +21,8 @@ spring:
     server:
       base: CN=Users,DC=ansv,DC=vn
     authen:
-      url: ldap://172.24.104.6:389
+#      url: ldap://172.24.104.6:389
+      url:  ldap://localhost:8389
       managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
       managerPassword: 123456
       filter: userPrincipalName
