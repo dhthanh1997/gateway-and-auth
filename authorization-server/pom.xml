@@ -36,12 +36,6 @@
             <type>pom</type>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>jakarta.validation</groupId>-->
-<!--            <artifactId>jakarta.validation-api</artifactId>-->
-<!--            <version>2.0.2</version>-->
-<!--        </dependency>-->
-
         <!-- import javax.servlet from jakarta.servlet -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
@@ -96,6 +90,7 @@
         <dependency>
             <groupId>com.unboundid</groupId>
             <artifactId>unboundid-ldapsdk</artifactId>
+            <version>5.0.1</version>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -252,15 +247,7 @@
                 <spring.profiles.active>dev</spring.profiles.active>
             </properties>
         </profile>
-        <profile>
-            <id>dev-microservice</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <spring.profiles.active>dev-microservice</spring.profiles.active>
-            </properties>
-        </profile>
+
         <profile>
             <id>staging</id>
             <activation>
@@ -279,15 +266,7 @@
                 <spring.profiles.active>prod</spring.profiles.active>
             </properties>
         </profile>
-        <profile>
-            <id>staging-microservice</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <properties>
-                <spring.profiles.active>staging-microservice</spring.profiles.active>
-            </properties>
-        </profile>
+
     </profiles>
 
 </project>

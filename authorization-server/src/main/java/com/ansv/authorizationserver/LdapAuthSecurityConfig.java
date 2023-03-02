@@ -73,6 +73,9 @@ public class LdapAuthSecurityConfig extends WebSecurityConfigurerAdapter {
             authenticationManagerBuilder.inMemoryAuthentication().withUser("superadmin@ansv.vn")
                     .password(passwordEncoder().encode("admin@123")).roles("ADMIN");
 
+            authenticationManagerBuilder.userDetailsService(userDetailsService).passwordEncoder(bCryptPasswordEncoder());
+
+
             authenticationManagerBuilder.authenticationProvider(
                     new LdapAuthenticationProvider(env, ldapUrl, baseDn, managerDn,
                             managerPassword, searchFilter, userDetailsService))
@@ -154,6 +157,12 @@ public class LdapAuthSecurityConfig extends WebSecurityConfigurerAdapter {
     // UsernamePasswordAuthenticationFilter.class);
     // return http.build();
     // }
+
+
+    @Bean
+    public PasswordEncoder bCryptPasswordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {

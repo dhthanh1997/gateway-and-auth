@@ -10,6 +10,8 @@ public interface CustomUserDetailService extends UserDetailsService {
 
     UserDetails loadUser(String username, String displayName, String email) ;
 
+    UserDetails loadUserByUsername(String username) ;
+
     UserDTO findByUsername(String username);
 
 }
