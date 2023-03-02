@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 public class AuthorizationConfig implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/**").allowedMethods("*").allowedOriginPatterns("*")
+        registry.addMapping("/authorization").allowedMethods("*").allowedOriginPatterns("http://localhost:8055")
                 .allowCredentials(true);
     }
 }

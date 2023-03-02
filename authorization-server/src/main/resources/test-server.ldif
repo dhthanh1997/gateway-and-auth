@@ -39,21 +39,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: benbidv
--
-add: distinguishedName
-distinguishedName: benbidv
--
-add: sAMAccountName
-sAMAccountName: benbidv
--
-add: userPrincipalName
-userPrincipalName: benbidv
--
-add: displayName
-displayName: benbidv
 cn: Ben Alex
 sn: Alex
 uid: ben
@@ -62,21 +47,6 @@ userPassword: $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
 
 
 dn: uid=admin,ou=people,dc=springframework,dc=org
-changetype: modify
-add: mailNickname
-mailNickname: adminhtbidv
--
-add: distinguishedName
-distinguishedName: adminhtbidv
--
-add: sAMAccountName
-sAMAccountName: adminhtbidv
--
-add: userPrincipalName
-userPrincipalName: adminhtbidv
--
-add: displayName
-displayName: adminhtbidv
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
@@ -88,21 +58,6 @@ userPassword: $2a$10$xgMeNxDvGTeI2u/MwPqKV.oIq8O1OeDEhcy8k19V.dTvLpWe88xRS
 
 
 dn: uid=test,ou=people,dc=springframework,dc=org
-changetype: modify
-add: mailNickname
-mailNickname: testbidv
--
-add: distinguishedName
-distinguishedName: testbidv
--
-add: sAMAccountName
-sAMAccountName: testbidv
--
-add: userPrincipalName
-userPrincipalName: testbidv
--
-add: displayName
-displayName: testbidv
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
@@ -114,21 +69,6 @@ userPassword: $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
 
 
 dn: uid=bachtuvu,ou=people,dc=springframework,dc=org
-changetype: modify
-add: mailNickname
-mailNickname: bachtuvubidv
--
-add: distinguishedName
-distinguishedName: bachtuvubidv
--
-add: sAMAccountName
-sAMAccountName: bachtuvubidv
--
-add: userPrincipalName
-userPrincipalName: bachtuvubidv
--
-add: displayName
-displayName: bachtuvubidv
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
@@ -140,21 +80,6 @@ userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
 
 
 dn: uid=JackyTran,ou=people,dc=springframework,dc=org
-changetype: modify
-add: mailNickname
-mailNickname: JackyTranbidv
--
-add: distinguishedName
-distinguishedName: JackyTranbidv
--
-add: sAMAccountName
-sAMAccountName: JackyTranbidv
--
-add: userPrincipalName
-userPrincipalName: JackyTranbidv
--
-add: displayName
-displayName: JackyTranbidv
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
@@ -167,21 +92,6 @@ userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
 
 
 dn: uid=duongvt,ou=people,dc=springframework,dc=org
-changetype: modify
-add: mailNickname
-mailNickname: duongvtbidv
--
-add: distinguishedName
-distinguishedName: duongvtbidv
--
-add: sAMAccountName
-sAMAccountName: duongvtbidv
--
-add: userPrincipalName
-userPrincipalName: duongvtbidv
--
-add: displayName
-displayName: duongvtbidv
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
@@ -198,21 +108,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: hoangkieubidv
--
-add: distinguishedName
-distinguishedName: hoangkieubidv
--
-add: sAMAccountName
-sAMAccountName: hoangkieubidv
--
-add: userPrincipalName
-userPrincipalName: hoangkieubidv
--
-add: displayName
-displayName: hoangkieubidv
 cn: hoangkieu
 sn: hoangkieu
 uid: hoangkieu
@@ -224,21 +119,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: longnguyenbidv
--
-add: distinguishedName
-distinguishedName: longnguyenbidv
--
-add: sAMAccountName
-sAMAccountName: longnguyenbidv
--
-add: userPrincipalName
-userPrincipalName: longnguyenbidv
--
-add: displayName
-displayName: longnguyenbidv
 cn: longnguyen
 sn: longnguyen
 uid: longnguyen
@@ -251,21 +131,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: thuyetltbidv
--
-add: distinguishedName
-distinguishedName: thuyetltbidv
--
-add: sAMAccountName
-sAMAccountName: thuyetltbidv
--
-add: userPrincipalName
-userPrincipalName: thuyetltbidv
--
-add: displayName
-displayName: trantuanvu8594
 cn: thuyetlt
 sn: thuyetlt
 uid: thuyetlt
@@ -278,21 +143,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: trantuanvubidv
--
-add: distinguishedName
-distinguishedName: trantuanvubidv
--
-add: sAMAccountName
-sAMAccountName: trantuanvubidv
--
-add: userPrincipalName
-userPrincipalName: trantuanvubidv
--
-add: displayName
-displayName: trantuanvubidv
 cn: trantuanvu
 sn: trantuanvu
 uid: trantuanvu
@@ -305,21 +155,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: ha123bidv
--
-add: distinguishedName
-distinguishedName: ha123bidv
--
-add: sAMAccountName
-sAMAccountName: ha123bidv
--
-add: userPrincipalName
-userPrincipalName: ha123bidv
--
-add: displayName
-displayName: ha123bidv
 cn: ha123
 sn: ha123
 uid: ha123
@@ -331,21 +166,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: test01bidv
--
-add: distinguishedName
-distinguishedName: test01bidv
--
-add: sAMAccountName
-sAMAccountName: test01bidv
--
-add: userPrincipalName
-userPrincipalName: test01bidv
--
-add: displayName
-displayName: test01bidv
 cn: test01
 sn: test01
 uid: test01
@@ -357,21 +177,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: cvqlkhbidv
--
-add: distinguishedName
-distinguishedName: cvqlkhbidv
--
-add: sAMAccountName
-sAMAccountName: cvqlkhbidv
--
-add: userPrincipalName
-userPrincipalName: cvqlkhbidv
--
-add: displayName
-displayName: cvqlkhbidv
 cn: cvqlkh
 sn: cvqlkh
 uid: cvqlkh
@@ -383,21 +188,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: ldqttdbidv
--
-add: distinguishedName
-distinguishedName: ldqttdbidv
--
-add: sAMAccountName
-sAMAccountName: ldqttdbidv
--
-add: userPrincipalName
-userPrincipalName: ldqttdbidv
--
-add: displayName
-displayName: ldqttdbidv
 cn: ldqttd
 sn: ldqttd
 uid: ldqttd
@@ -409,21 +199,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: cvqttdbidv
--
-add: distinguishedName
-distinguishedName: cvqttdbidv
--
-add: sAMAccountName
-sAMAccountName: cvqttdbidv
--
-add: userPrincipalName
-userPrincipalName: cvqttdbidv
--
-add: displayName
-displayName: cvqttdbidv
 cn: cvqttd
 sn: cvqttd
 uid: cvqttd
@@ -435,21 +210,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: ldgdkhbidv
--
-add: distinguishedName
-distinguishedName: ldgdkhbidv
--
-add: sAMAccountName
-sAMAccountName: ldgdkhbidv
--
-add: userPrincipalName
-userPrincipalName: ldgdkhbidv
--
-add: displayName
-displayName: ldgdkhbidv
 cn: ldgdkh
 sn: ldgdkh
 uid: ldgdkh
@@ -462,21 +222,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: cvgdkhbidv
--
-add: distinguishedName
-distinguishedName: cvgdkhbidv
--
-add: sAMAccountName
-sAMAccountName: cvgdkhbidv
--
-add: userPrincipalName
-userPrincipalName: cvgdkhbidv
--
-add: displayName
-displayName: cvgdkhbidv
 cn: cvgdkh
 sn: cvgdkh
 uid: cvgdkh
@@ -489,21 +234,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: admin_minhbidv
--
-add: distinguishedName
-distinguishedName: admin_minhbidv
--
-add: sAMAccountName
-sAMAccountName: admin_minhbidv
--
-add: userPrincipalName
-userPrincipalName: admin_minhbidv
--
-add: displayName
-displayName: admin_minhbidv
 cn: admin_minh
 sn: admin_minh
 uid: admin_minh
@@ -515,21 +245,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: admin_qthtbidv
--
-add: distinguishedName
-distinguishedName: admin_qthtbidv
--
-add: sAMAccountName
-sAMAccountName: admin_qthtbidv
--
-add: userPrincipalName
-userPrincipalName: admin_qthtbidv
--
-add: displayName
-displayName: admin_qthtbidv
 cn: admin_qtht
 sn: admin_qtht
 uid: admin_qtht
@@ -541,21 +256,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: admin_qtht2bidv
--
-add: distinguishedName
-distinguishedName: admin_qtht2bidv
--
-add: sAMAccountName
-sAMAccountName: admin_qtht2bidv
--
-add: userPrincipalName
-userPrincipalName: admin_qtht2bidv
--
-add: displayName
-displayName: admin_qtht2bidv
 cn: admin_qtht2
 sn: admin_qtht2
 uid: admin_qtht2
@@ -567,21 +267,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: admin_qtht3bidv
--
-add: distinguishedName
-distinguishedName: admin_qtht3bidv
--
-add: sAMAccountName
-sAMAccountName: admin_qtht3bidv
--
-add: userPrincipalName
-userPrincipalName: admin_qtht3bidv
--
-add: displayName
-displayName: admin_qtht3bidv
 cn: admin_qtht3
 sn: admin_qtht3
 uid: admin_qtht3
@@ -593,21 +278,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: duongtq
--
-add: distinguishedName
-distinguishedName: duongtq
--
-add: sAMAccountName
-sAMAccountName: duongtq
--
-add: userPrincipalName
-userPrincipalName: duongtq
--
-add: displayName
-displayName: duongtq
 cn: duongtq
 sn: duongtq
 uid: duongtq
@@ -618,21 +288,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: quannh3
--
-add: distinguishedName
-distinguishedName: quannh3
--
-add: sAMAccountName
-sAMAccountName: quannh3
--
-add: userPrincipalName
-userPrincipalName: quannh3
--
-add: displayName
-displayName: quannh3
 cn: quannh3
 sn: quannh3
 uid: quannh3
@@ -644,21 +299,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: nhungdth2
--
-add: distinguishedName
-distinguishedName: nhungdth2
--
-add: sAMAccountName
-sAMAccountName: nhungdth2
--
-add: userPrincipalName
-userPrincipalName: nhungdth2
--
-add: displayName
-displayName: nhungdth2
 cn: nhungdth2
 sn: nhungdth2
 uid: nhungdth2
@@ -669,21 +309,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: hangdtt1
--
-add: distinguishedName
-distinguishedName: hangdtt1
--
-add: sAMAccountName
-sAMAccountName: hangdtt1
--
-add: userPrincipalName
-userPrincipalName: hangdtt1
--
-add: displayName
-displayName: hangdtt1
 cn: hangdtt1
 sn: hangdtt1
 uid: hangdtt1
@@ -694,21 +319,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: luonglx
--
-add: distinguishedName
-distinguishedName: luonglx
--
-add: sAMAccountName
-sAMAccountName: luonglx
--
-add: userPrincipalName
-userPrincipalName: luonglx
--
-add: displayName
-displayName: luonglx
 cn: luonglx
 sn: luonglx
 uid: luonglx
@@ -720,21 +330,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: syth
--
-add: distinguishedName
-distinguishedName: syth
--
-add: sAMAccountName
-sAMAccountName: syth
--
-add: userPrincipalName
-userPrincipalName: syth
--
-add: displayName
-displayName: syth
 cn: syth
 sn: syth
 uid: syth
@@ -745,21 +340,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: ngocdtb5
--
-add: distinguishedName
-distinguishedName: ngocdtb5
--
-add: sAMAccountName
-sAMAccountName: ngocdtb5
--
-add: userPrincipalName
-userPrincipalName: ngocdtb5
--
-add: displayName
-displayName: ngocdtb5
 cn: ngocdtb5
 sn: ngocdtb5
 uid: ngocdtb5
@@ -772,21 +352,6 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: hiennt10
--
-add: distinguishedName
-distinguishedName: hiennt10
--
-add: sAMAccountName
-sAMAccountName: hiennt10
--
-add: userPrincipalName
-userPrincipalName: hiennt10
--
-add: displayName
-displayName: hiennt10
 cn: hiennt10
 sn: hiennt10
 uid: hiennt10
@@ -798,51 +363,20 @@ objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: lannt7
--
-add: distinguishedName
-distinguishedName: lannt7
--
-add: sAMAccountName
-sAMAccountName: lannt7
--
-add: userPrincipalName
-userPrincipalName: lannt7
--
-add: displayName
-displayName: lannt7
 cn: lannt7
 sn: lannt7
 uid: lannt7
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-
 
 dn: uid=trantuanvu8594,ou=people,dc=springframework,dc=org
 objectclass: top
 objectclass: person
 objectclass: organizationalPerson
 objectclass: inetOrgPerson
-changetype: modify
-add: mailNickname
-mailNickname: trantuanvu8594
--
-add: distinguishedName
-distinguishedName: trantuanvu8594
--
-add: sAMAccountName
-sAMAccountName: trantuanvu8594
--
-add: userPrincipalName
-userPrincipalName: trantuanvu8594
--
-add: displayName
-displayName: trantuanvu8594
 cn: trantuanvu8594
 sn: trantuanvu8594
 uid: trantuanvu8594
-userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
+userPassword:  123456a@
 
 
 

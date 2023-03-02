@@ -16,22 +16,23 @@ spring:
   application:
     name: ansv-authorization
   ldap:
-    embedded:
-      ldif: classpath:test-server.ldif
-      base-dn: dc=springframework,dc=org
-      port: 8389
-      validation:
-        enabled: true
+#    embedded:
+#      ldif: classpath:test-server.ldif
+#      base-dn: dc=springframework,dc=org
+#      port: 8389
+#      validation:
+#        enabled: true
     server:
-#      base: CN=Users,DC=ansv,DC=vn
-       base: dc=springframework,dc=org
+      base: CN=Users,DC=ansv,DC=vn
+#       base: dc=springframework,dc=org
     authen:
-#      url: ldap://172.24.104.6:389
+      url: ldap://172.24.104.6:389
 #      url: ldap://localhost:8389
-#      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
-      managerDn: uid=admin,ou=people,dc=springframework,dc=org
+      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
+#      managerDn: uid=admin,ou=people,dc=springframework,dc=org
       managerPassword: 123456
-      filter: uid
+#      filter: uid
+      filter: userPrincipalName
       password: userPassword
   main:
     banner-mode: off
