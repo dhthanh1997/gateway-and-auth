@@ -1,0 +1,73 @@
+server:
+  port: 8055
+#  address: 172.19.0.2
+
+eureka:
+  client:
+    serviceUrl:
+      #      defaultZone: http://ansv-registry-service:8052/eureka/
+#            defaultZone: http://localhost:8052/eureka/
+      defaultZone: http://172.22.0.2:8052/eureka
+    #      defaultZone: http://host.docker.internal:8052/eureka
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    hostname: 172.22.0.2
+    #    hostname: host.docker.internal
+#    hostname: ansv-registry-service
+#    hostname: localhost
+
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: ansv-gateway
+  cloud:
+    gateway:
+      # httpclient:
+      #     proxy:
+      #       host: localhost
+      # port: 8888
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        - AddResponseHeader=Access-Control-Allow-Origin, *
+      globalcors:
+        add-to-simple-url-handler-mapping: true
+        corsConfigurations:
+          "[/**]":
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+      routes:
+        - id: app1
+          uri: http://host.docker.internal:8091
+          predicates:
+            - Path=/app1/**
+        - id: app2
+          uri: http://host.docker.internal:8090
+          predicates:
+            - Path=/app2/**
+        - id: task-management
+          uri: http://host.docker.internal:8092
+          predicates:
+            - Path=/taskManagement/**
+            - Method=GET,POST,PUT,DELETE
+        - id: authorization
+          uri: http://host.docker.internal:8053
+          predicates:
+            - Path=/authorization/**
+            - Method=GET,POST,PUT,DELETE
+      httpserver:
+        wiretap: true
+logging:
+  level:
+    reactor:
+      netty: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: TRACE
+
+    
+

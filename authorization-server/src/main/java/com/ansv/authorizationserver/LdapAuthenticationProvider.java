@@ -102,7 +102,7 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
 
         try {
 
-            ldapTemplate.authenticate(query, authentication.getCredentials().toString());
+          ldapTemplate.authenticate(query, authentication.getCredentials().toString());
             List<CustomUserDetails> users = ldapTemplate.search(query, new AttributesMapper() {
                 public CustomUserDetails mapFromAttributes(Attributes attributes) throws NamingException {
                     CustomUserDetails user = new CustomUserDetails();

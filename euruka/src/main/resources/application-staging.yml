@@ -1,0 +1,26 @@
+server:
+  port: 8052
+  address: 172.22.0.2
+
+spring:
+  application:
+    name: ansv-registry-service
+
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+#      defaultZone: http://ansv-registry-service:8052/eureka
+      #      defaultZone: http://localhost:8052/eureka
+      defaultZone: http://172.22.0.2:8052/eureka
+#      defaultZone: http://host.docker.internal:8052/eureka
+
+logging:
+  level:
+    root: debug
+  org:
+    springframework: debug
+  hibernate:
+    SQL: true
