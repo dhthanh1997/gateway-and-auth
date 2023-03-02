@@ -43,8 +43,8 @@ cn: Ben Alex
 sn: Alex
 uid: ben
 userPassword: $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: benbidv
-distinguishedName: benbidv
+
+
 
 dn: uid=admin,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -55,8 +55,6 @@ cn: admin
 sn: admin
 uid: admin
 userPassword: $2a$10$xgMeNxDvGTeI2u/MwPqKV.oIq8O1OeDEhcy8k19V.dTvLpWe88xRS
-mailNickName: adminhtbidv
-distinguishedName: adminhtbidv
 
 
 dn: uid=test,ou=people,dc=springframework,dc=org
@@ -68,8 +66,6 @@ cn: test
 sn: test
 uid: test
 userPassword: $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: testbidv
-distinguishedName: testbidv
 
 
 dn: uid=bachtuvu,ou=people,dc=springframework,dc=org
@@ -81,9 +77,6 @@ cn: bachtuvu
 sn: bachtuvu
 uid: bachtuvu
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: bachtuvubidv
-distinguishedName: bachtuvubidv
-
 
 
 dn: uid=JackyTran,ou=people,dc=springframework,dc=org
@@ -95,8 +88,6 @@ cn: JackyTran
 sn: JackyTran
 uid: JackyTran
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: JackyTranbidv
-distinguishedName: JackyTranbidv
 
 
 
@@ -109,8 +100,6 @@ cn: duongvt
 sn: duongvt
 uid: duongvt
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: duongvtbidv
-distinguishedName: duongvtbidv
 
 
 
@@ -123,9 +112,6 @@ cn: hoangkieu
 sn: hoangkieu
 uid: hoangkieu
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: hoangkieubidv
-distinguishedName: hoangkieubidv
-
 
 
 dn: uid=longnguyen,ou=people,dc=springframework,dc=org
@@ -137,8 +123,6 @@ cn: longnguyen
 sn: longnguyen
 uid: longnguyen
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: longnguyenbidv
-distinguishedName: longnguyenbidv
 
 
 
@@ -151,8 +135,6 @@ cn: thuyetlt
 sn: thuyetlt
 uid: thuyetlt
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: thuyetltbidv
-distinguishedName: thuyetltbidv
 
 
 
@@ -165,9 +147,6 @@ cn: trantuanvu
 sn: trantuanvu
 uid: trantuanvu
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: trantuanvubidv
-distinguishedName: trantuanvubidv
-
 
 
 
@@ -180,9 +159,6 @@ cn: ha123
 sn: ha123
 uid: ha123
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: ha123bidv
-distinguishedName: ha123bidv
-
 
 
 dn: uid=test01,ou=people,dc=springframework,dc=org
@@ -194,9 +170,6 @@ cn: test01
 sn: test01
 uid: test01
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: test01bidv
-distinguishedName: test01bidv
-
 
 
 dn: uid=cvqlkh,ou=people,dc=springframework,dc=org
@@ -208,9 +181,6 @@ cn: cvqlkh
 sn: cvqlkh
 uid: cvqlkh
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: cvqlkhbidv
-distinguishedName: cvqlkhbidv
-
 
 
 dn: uid=ldqttd,ou=people,dc=springframework,dc=org
@@ -222,9 +192,6 @@ cn: ldqttd
 sn: ldqttd
 uid: ldqttd
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: ldqttdbidv
-distinguishedName: ldqttdbidv
-
 
 
 dn: uid=cvqttd,ou=people,dc=springframework,dc=org
@@ -236,9 +203,6 @@ cn: cvqttd
 sn: cvqttd
 uid: cvqttd
 userPassword:  123456a@
-mailNickName: cvqttdbidv
-distinguishedName: cvqttdbidv
-
 
 
 dn: uid=ldgdkh,ou=people,dc=springframework,dc=org
@@ -250,9 +214,6 @@ cn: ldgdkh
 sn: ldgdkh
 uid: ldgdkh
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: ldgdkhbidv
-distinguishedName: ldgdkhbidv
-
 
 
 
@@ -265,9 +226,6 @@ cn: cvgdkh
 sn: cvgdkh
 uid: cvgdkh
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: cvgdkhbidv
-distinguishedName: cvgdkhbidv
-
 
 
 
@@ -280,9 +238,6 @@ cn: admin_minh
 sn: admin_minh
 uid: admin_minh
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: admin_minhbidv
-distinguishedName: admin_minhbidv
-
 
 
 dn: uid=admin_qtht,ou=people,dc=springframework,dc=org
@@ -294,9 +249,6 @@ cn: admin_qtht
 sn: admin_qtht
 uid: admin_qtht
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: admin_qthtbidv
-distinguishedName: admin_qthtbidv
-
 
 
 dn: uid=admin_qtht2,ou=people,dc=springframework,dc=org
@@ -308,9 +260,6 @@ cn: admin_qtht2
 sn: admin_qtht2
 uid: admin_qtht2
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: admin_qtht2bidv
-distinguishedName: admin_qtht2bidv
-
 
 
 dn: uid=admin_qtht3,ou=people,dc=springframework,dc=org
@@ -322,8 +271,6 @@ cn: admin_qtht3
 sn: admin_qtht3
 uid: admin_qtht3
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: admin_qtht3bidv
-distinguishedName: admin_qtht3bidv
 
 
 dn: uid=duongtq,ou=people,dc=springframework,dc=org
@@ -335,8 +282,6 @@ cn: duongtq
 sn: duongtq
 uid: duongtq
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: duongtq
-distinguishedName: duongtq
 
 dn: uid=quannh3,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -347,8 +292,7 @@ cn: quannh3
 sn: quannh3
 uid: quannh3
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: quannh3
-distinguishedName: quannh3
+
 
 dn: uid=nhungdth2,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -359,8 +303,6 @@ cn: nhungdth2
 sn: nhungdth2
 uid: nhungdth2
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: nhungdth2
-distinguishedName: nhungdth2
 
 dn: uid=hangdtt1,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -371,8 +313,6 @@ cn: hangdtt1
 sn: hangdtt1
 uid: hangdtt1
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: hangdtt1
-distinguishedName: hangdtt1
 
 dn: uid=luonglx,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -383,8 +323,6 @@ cn: luonglx
 sn: luonglx
 uid: luonglx
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: luonglx
-distinguishedName: luonglx
 
 
 dn: uid=syth,ou=people,dc=springframework,dc=org
@@ -396,8 +334,6 @@ cn: syth
 sn: syth
 uid: syth
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: syth
-distinguishedName: syth
 
 dn: uid=ngocdtb5,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -408,8 +344,8 @@ cn: ngocdtb5
 sn: ngocdtb5
 uid: ngocdtb5
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: ngocdtb5
-distinguishedName: ngocdtb5
+
+
 
 dn: uid=hiennt10,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -420,8 +356,7 @@ cn: hiennt10
 sn: hiennt10
 uid: hiennt10
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: hiennt10
-distinguishedName: hiennt10
+
 
 dn: uid=lannt7,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -432,9 +367,16 @@ cn: lannt7
 sn: lannt7
 uid: lannt7
 userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
-mailNickName: lannt7
-distinguishedName: lannt7
 
+dn: uid=trantuanvu8594,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: trantuanvu8594
+sn: trantuanvu8594
+uid: trantuanvu8594
+userPassword:  123456a@
 
 
 
