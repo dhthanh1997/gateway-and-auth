@@ -16,23 +16,23 @@ spring:
   application:
     name: ansv-authorization
   ldap:
-#    embedded:
-#      ldif: classpath:test-server.ldif
-#      base-dn: dc=springframework,dc=org
-#      port: 8389
-#      validation:
-#        enabled: true
+    embedded:
+      ldif: classpath:test-server.ldif
+      base-dn: dc=springframework,dc=org
+      port: 8389
+      validation:
+        enabled: true
     server:
-      base: CN=Users,DC=ansv,DC=vn
-#       base: dc=springframework,dc=org
+#      base: CN=Users,DC=ansv,DC=vn
+       base: dc=springframework,dc=org
     authen:
-      url: ldap://172.24.104.6:389
-#      url: ldap://localhost:8389
-      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
-#      managerDn: uid=admin,ou=people,dc=springframework,dc=org
+#      url: ldap://172.24.104.6:389
+      url: ldap://localhost:8389
+#      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
+      managerDn: uid=admin,ou=people,dc=springframework,dc=org
       managerPassword: 123456
-#      filter: uid
-      filter: userPrincipalName
+      filter: uid
+#      filter: userPrincipalName
       password: userPassword
   main:
     banner-mode: off
@@ -49,18 +49,19 @@ spring:
       ddl-auto: none
   liquibase:
     enabled: false
-#  rabbitmq:
-#    host: 172.17.0.2
-#    port: 5672
-#    username: guest
-#    password: guest
-#    virtualHost: /
-#    exchange: user.exchange
-#    routingkey: user.routingkey
-#    queue: user.queue
-#    exchange-received: user-received.exchange
-#    routingkey-received: user-received.routingkey
-#    queue-received: user-received.queue
+  rabbitmq:
+#    host: 172.22.48.1
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    exchange: task-management.req.events
+    routingkey: detail.user.req
+    queue: detail.user.task-management.req.queue
+    exchange-received: task-management.res.events
+    routingkey-received: detail.user.res
+    queue-received: detail.user.task-management.res.queue
 
 logging:
   level:

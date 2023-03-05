@@ -2,6 +2,7 @@ package com.ansv.authorizationserver;
 
 import com.ansv.authorizationserver.service.impl.CustomUserDetailService;
 import com.ansv.authorizationserver.service.impl.CustomUserDetails;
+import com.ansv.authorizationserver.util.DataUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
@@ -100,28 +101,49 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
         SearchScope searchScope = SearchScope.SUBTREE;
         LdapQuery query = LdapQueryBuilder.query().base(base).searchScope(searchScope).filter(filterLdap);
 
-        try {
+//        try {
 
-          ldapTemplate.authenticate(query, authentication.getCredentials().toString());
-            List<CustomUserDetails> users = ldapTemplate.search(query, new AttributesMapper() {
-                public CustomUserDetails mapFromAttributes(Attributes attributes) throws NamingException {
-                    CustomUserDetails user = new CustomUserDetails();
-                    user.setUsername((String) attributes.get("sAMAccountName").get());
-                    user.setDisplayName((String) attributes.get("displayName").get());
-                    user.setEmail((String) attributes.get("userPrincipalName").get());
-                    return user;
+        ldapTemplate.authenticate(query, authentication.getCredentials().toString());
+        List<CustomUserDetails> users = ldapTemplate.search(query, new AttributesMapper() {
+            public CustomUserDetails mapFromAttributes(Attributes attributes) throws NamingException {
+                CustomUserDetails user = new CustomUserDetails();
+                String uid = (String) attributes.get("uid").get();
+                if(!DataUtils.isNullOrEmpty(attributes.get("sAMAccountName"))) {
+
                 }
-            });
 
-            UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
-            Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
-                    authentication.getCredentials().toString(), new ArrayList<>());
-            return auth;
-        } catch (Exception e) {
-            //TODO: handle exception
-            logger.error(e.getMessage(), e);
-            return null;
-        }
+                if(!DataUtils.isNullOrEmpty(attributes.get("displayName"))) {
+                    String displayName = (String) attributes.get("displayName").get();
+                    user.setDisplayName(displayName);
+                }
+                else {
+                    user.setDisplayName(uid);
+
+                }
+                if(!DataUtils.isNullOrEmpty(attributes.get("userPrincipalName"))) {
+                    String displayName = (String) attributes.get("userPrincipalName").get();
+                    user.setEmail(displayName);
+                } else {
+                    user.setEmail(uid);
+
+                }
+
+                user.setUsername(uid);
+
+                return user;
+            }
+        });
+//
+        UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
+//            UserDetails userDetails = customUserDetailService.loadUserByUsername(authentication.getName());
+        Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
+                authentication.getCredentials().toString(), new ArrayList<>());
+        return auth;
+//        } catch (Exception e) {
+//            //TODO: handle exception
+//            logger.error(e.getMessage(), e);
+//            return null;
+//        }
     }
 
     @Override

@@ -48,6 +48,9 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
             log.warn("User not found with username ----> create in db", username);
             user = new UserEntity();
             user.setUsername(username);
+            if(DataUtils.isNullOrEmpty(user.getEmail())) {
+                user.setEmail(username);
+            }
             user.setStatus("ACTIVE");
             userRepository.save(user);
             newUser = new User(user.getUsername(), user.getEmail(), buildSimpleGrantedAuthorities("user"));
