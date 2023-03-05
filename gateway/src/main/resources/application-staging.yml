@@ -7,13 +7,13 @@ eureka:
     serviceUrl:
       #      defaultZone: http://ansv-registry-service:8052/eureka/
 #            defaultZone: http://localhost:8052/eureka/
-      defaultZone: http://172.22.0.2:8052/eureka
-    #      defaultZone: http://host.docker.internal:8052/eureka
+#      defaultZone: http://172.22.0.2:8052/eureka
+          defaultZone: http://host.docker.internal:8052/eureka
     register-with-eureka: true
     fetch-registry: true
   instance:
-    hostname: 172.22.0.2
-    #    hostname: host.docker.internal
+#    hostname: 172.22.0.2
+        hostname: host.docker.internal
 #    hostname: ansv-registry-service
 #    hostname: localhost
 
@@ -49,7 +49,7 @@ spring:
           predicates:
             - Path=/app2/**
         - id: task-management
-          uri: http://host.docker.internal:8092
+          uri: http://host.docker.internal:8098
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
