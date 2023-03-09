@@ -24,11 +24,18 @@ public class RabbitMqReceiver implements RabbitListenerConfigurer {
     private RabbitMqSender rabbitMqSender;
 
     @RabbitListener(queues = "${spring.rabbitmq.queue-received}")
-    public void receivedMessage(String username){
+    public void receivedMessage(String username) {
         logger.info("Username Received is.. " + username);
         UserDTO dto = customService.findByUsername(username);
         rabbitMqSender.sender(dto);
     }
+
+//    @RabbitListener(queues = "${spring.rabbitmq.queue-received}")
+//    public UserDTO receivedMessage(String username) {
+//        logger.info("Username Received is.. " + username);
+//        UserDTO dto = customService.findByUsername(username);
+//        return dto;
+//    }
 
     @Override
     public void configureRabbitListeners(RabbitListenerEndpointRegistrar rabbitListenerEndpointRegistrar) {
