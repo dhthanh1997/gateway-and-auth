@@ -27,17 +27,13 @@ spring:
     name: ansv-gateway
   cloud:
     gateway:
-      # httpclient:
-      #     proxy:
-      #       host: localhost
-      # port: 8888
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
         - AddResponseHeader=Access-Control-Allow-Origin, *
       globalcors:
         add-to-simple-url-handler-mapping: true
         corsConfigurations:
-          "[/**]":
+          '[/**]':
             allowedOrigins: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
@@ -55,12 +51,8 @@ spring:
           uri: http://localhost:8098
           predicates:
             - Path=/taskManagement/**
-            - Method=GET,POST,PUT,DELETE
-#        - id: authorization
-#          uri: http://localhost:8055
-#          predicates:
-#            - Path=/authentication/**
-#            - Method=GET,POST,PUT,DELETE
+            - Method=OPTIONS,HEAD,GET,POST,PUT,DELETE
+
       httpserver:
         wiretap: true
   ldap:
