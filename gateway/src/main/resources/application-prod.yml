@@ -1,41 +1,32 @@
 server:
   port: 8055
-#  address: 172.19.0.2
 
 eureka:
   client:
     serviceUrl:
-      #      defaultZone: http://ansv-registry-service:8052/eureka/
-      #            defaultZone: http://localhost:8052/eureka/
-      defaultZone: http://172.22.0.2:8052/eureka
-    #      defaultZone: http://host.docker.internal:8052/eureka
+      defaultZone: http://host.docker.internal:8052/eureka
     register-with-eureka: true
     fetch-registry: true
   instance:
-    hostname: 172.22.0.2
-    #    hostname: host.docker.internal
-#    hostname: ansv-registry-service
-#    hostname: localhost
+    hostname: host.docker.internal
 
 
 spring:
   main:
     web-application-type: reactive
+    allow-bean-definition-overriding: true
+    banner-mode: off
   application:
     name: ansv-gateway
   cloud:
     gateway:
-      # httpclient:
-      #     proxy:
-      #       host: localhost
-      # port: 8888
       default-filters:
         - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
         - AddResponseHeader=Access-Control-Allow-Origin, *
       globalcors:
         add-to-simple-url-handler-mapping: true
         corsConfigurations:
-          "[/**]":
+          '[/**]':
             allowedOrigins: "*"
             allowedMethods: "*"
             allowedHeaders: "*"
@@ -49,7 +40,7 @@ spring:
           predicates:
             - Path=/app2/**
         - id: task-management
-          uri: http://host.docker.internal:8092
+          uri: http://host.docker.internal:8098
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
@@ -60,19 +51,38 @@ spring:
             - Method=GET,POST,PUT,DELETE
       httpserver:
         wiretap: true
-    datasource:
-      url: jdbc:postgresql://localhost:5432/Authorization
-      username: postgres
-      password: root
-      jpa:
-        properties:
-          hibernate:
-            dialect: org.hibernate.dialect.PostgreSQLDialect
-        show-sql: true
+
+  ldap:
+    embedded:
+      ldif: classpath:test-server.ldif
+      base-dn: dc=springframework,dc=org
+      port: 8389
+      validation:
+        enabled: true
+    server:
+      base: dc=springframework,dc=org
+    authen:
+      url: ldap://host.docker.internal:8389
+      managerDn: uid=admin,ou=people,dc=springframework,dc=org
+      managerPassword: 123456
+      filter: uid
+      password: userPassword
+
+  datasource:
+    url: jdbc:postgresql://host.docker.internal:5432/Authorization
+    username: postgres
+    password: root
+    jpa:
+      properties:
         hibernate:
-          ddl-auto: none
-      liquibase:
-        enabled: false
+          dialect: org.hibernate.dialect.PostgreSQLDialect
+      show-sql: true
+      hibernate:
+        ddl-auto: none
+  liquibase:
+    enabled: false
+    contexts: prod
+
 logging:
   level:
     reactor:
@@ -82,5 +92,9 @@ logging:
         cloud:
           gateway: TRACE
 
+#jwttoken
+app:
+  jwtSecret: 9a02115a835ee03d5fb83cd8a468ea33e4090aaaec87f53c9fa54512bbef4db8dc656c82a315fa0c785c08b0134716b81ddcd0153d2a7556f2e154912cf5675f
+  tokenValidity: 604800000
     
 
