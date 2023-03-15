@@ -6,7 +6,7 @@ eureka:
   client:
     serviceUrl:
       #      defaultZone: http://ansv-registry-service:8052/eureka/
-#            defaultZone: http://localhost:8052/eureka/
+      #            defaultZone: http://localhost:8052/eureka/
       defaultZone: http://172.22.0.2:8052/eureka
     #      defaultZone: http://host.docker.internal:8052/eureka
     register-with-eureka: true
@@ -60,6 +60,19 @@ spring:
             - Method=GET,POST,PUT,DELETE
       httpserver:
         wiretap: true
+    datasource:
+      url: jdbc:postgresql://localhost:5432/Authorization
+      username: postgres
+      password: root
+      jpa:
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
+        hibernate:
+          ddl-auto: none
+      liquibase:
+        enabled: false
 logging:
   level:
     reactor:

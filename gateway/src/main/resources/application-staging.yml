@@ -7,13 +7,13 @@ eureka:
     serviceUrl:
       #      defaultZone: http://ansv-registry-service:8052/eureka/
 #            defaultZone: http://localhost:8052/eureka/
-#      defaultZone: http://172.22.0.2:8052/eureka
-          defaultZone: http://host.docker.internal:8052/eureka
+      defaultZone: http://172.22.0.2:8052/eureka
+    #      defaultZone: http://host.docker.internal:8052/eureka
     register-with-eureka: true
     fetch-registry: true
   instance:
-#    hostname: 172.22.0.2
-        hostname: host.docker.internal
+    hostname: 172.22.0.2
+    #    hostname: host.docker.internal
 #    hostname: ansv-registry-service
 #    hostname: localhost
 
@@ -53,13 +53,23 @@ spring:
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
-        - id: authorization
-          uri: http://host.docker.internal:8053
-          predicates:
-            - Path=/authorization/**
-            - Method=GET,POST,PUT,DELETE
       httpserver:
         wiretap: true
+
+    datasource:
+      url: jdbc:postgresql://host.docker.internal:5432/Authorization
+      username: postgres
+      password: root
+      jpa:
+        properties:
+          hibernate:
+            dialect: org.hibernate.dialect.PostgreSQLDialect
+        show-sql: true
+        hibernate:
+          ddl-auto: none
+      liquibase:
+        enabled: false
+
 logging:
   level:
     reactor:

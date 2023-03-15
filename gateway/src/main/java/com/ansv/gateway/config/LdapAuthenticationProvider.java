@@ -1,8 +1,8 @@
-package com.ansv.authorizationserver;
+package com.ansv.gateway.config;
 
-import com.ansv.authorizationserver.service.impl.CustomUserDetailService;
-import com.ansv.authorizationserver.service.impl.CustomUserDetails;
-import com.ansv.authorizationserver.util.DataUtils;
+import com.ansv.gateway.service.CustomUserDetailService;
+import com.ansv.gateway.service.CustomUserDetails;
+import com.ansv.gateway.util.DataUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;

@@ -1,25 +1,18 @@
-package com.ansv.authorizationserver.service.impl;
+package com.ansv.gateway.service;
 
-import com.ansv.authorizationserver.dto.mapper.UserMapper;
-import com.ansv.authorizationserver.dto.response.UserDTO;
-import com.ansv.authorizationserver.model.UserEntity;
-import com.ansv.authorizationserver.repository.UserEntityRepository;
-import com.ansv.authorizationserver.util.DataUtils;
-import lombok.SneakyThrows;
+import com.ansv.gateway.dto.mapper.UserMapper;
+import com.ansv.gateway.dto.response.UserDTO;
+import com.ansv.gateway.model.UserEntity;
+import com.ansv.gateway.repository.UserEntityRepository;
+import com.ansv.gateway.util.DataUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ldap.core.DirContextAdapter;
-import org.springframework.ldap.core.support.LdapContextSource;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.context.SecurityContext;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import javax.naming.ldap.LdapContext;
 import java.util.ArrayList;
 import java.util.List;
 
