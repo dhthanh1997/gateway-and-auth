@@ -90,8 +90,6 @@ public class LdapAuthSecurityConfig {
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
         http.csrf(csrf -> csrf.disable());
         http.cors().disable();
-
-
         return http.build();
     }
 

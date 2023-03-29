@@ -2,11 +2,13 @@ package com.ansv.gateway.config;
 
 import com.ansv.gateway.service.CustomUserDetailService;
 import com.ansv.gateway.service.CustomUserDetails;
+import com.ansv.gateway.service.RedisService;
 import com.ansv.gateway.util.DataUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.ldap.core.AttributesMapper;
 import org.springframework.ldap.core.LdapTemplate;
@@ -73,6 +75,7 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
     private LdapTemplate ldapTemplate;
 
 
+
     private void initContext() {
         contextSource = new LdapContextSource();
         contextSource.setUrl(ldapUrl);
@@ -101,7 +104,7 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
         SearchScope searchScope = SearchScope.SUBTREE;
         LdapQuery query = LdapQueryBuilder.query().base(base).searchScope(searchScope).filter(filterLdap);
 
-//        try {
+        try {
 
         ldapTemplate.authenticate(query, authentication.getCredentials().toString());
         List<CustomUserDetails> users = ldapTemplate.search(query, new AttributesMapper() {
@@ -133,17 +136,19 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
                 return user;
             }
         });
+
+
 //
         UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
 //            UserDetails userDetails = customUserDetailService.loadUserByUsername(authentication.getName());
         Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
                 authentication.getCredentials().toString(), new ArrayList<>());
         return auth;
-//        } catch (Exception e) {
-//            //TODO: handle exception
-//            logger.error(e.getMessage(), e);
-//            return null;
-//        }
+        } catch (Exception e) {
+            //TODO: handle exception
+            logger.error(e.getMessage(), e);
+            return null;
+        }
     }
 
     @Override

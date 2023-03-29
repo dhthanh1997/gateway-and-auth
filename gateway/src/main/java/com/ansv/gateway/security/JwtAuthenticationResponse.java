@@ -14,7 +14,7 @@ import static com.ansv.gateway.constants.Constants.JWT_AUTH_TOKEN_VALIDITY;
 @Data
 public class JwtAuthenticationResponse {
 
-
+    private String uuid;
     private String accessToken;
     private String tokenType = "Bearer";
     private boolean success = false;
@@ -102,15 +102,27 @@ public class JwtAuthenticationResponse {
         }
     }
 
-    public JwtAuthenticationResponse(String accessToken, String username, String role) {
+    public JwtAuthenticationResponse(String accessToken, String username, List<String> role) {
         this.accessToken = accessToken;
         JwtTokenResponse tokenResponse = new JwtTokenResponse();
         tokenResponse.setAccessToken(accessToken);
         tokenResponse.setExpiresIn(JWT_AUTH_TOKEN_VALIDITY);
         this.success = true;
         this.username = username;
-        this.role = Arrays.asList(role);
-        this.permissions = Arrays.asList(role);
+        this.role = role;
+        this.permissions = role;
+
+    }
+
+    public JwtAuthenticationResponse(String accessToken, String username, String uuid) {
+//        this.uuid = uuid;
+//        JwtTokenResponse tokenResponse = new JwtTokenResponse();
+//        tokenResponse.setAccessToken(accessToken);
+//        tokenResponse.setExpiresIn(JWT_AUTH_TOKEN_VALIDITY);
+        this.setUuid(uuid);
+        this.setAccessToken(accessToken);
+        this.success = true;
+        this.username = username;
 
     }
 }

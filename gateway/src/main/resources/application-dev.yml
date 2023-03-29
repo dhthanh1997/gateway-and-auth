@@ -44,11 +44,11 @@ spring:
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE
-        - id: authorization
-          uri: http://localhost:8053
-          predicates:
-            - Path=/authorization/**
-            - Method=GET,POST,PUT,DELETE
+#        - id: authorization
+#          uri: http://localhost:8053
+#          predicates:
+#            - Path=/authorization/**
+#            - Method=GET,POST,PUT,DELETE
       httpserver:
         wiretap: true
   ldap:
@@ -80,6 +80,21 @@ spring:
   liquibase:
     enabled: false
     contexts: dev
+  # redis configuration for caching
+  cache:
+    type: redis
+    host: localhost
+    port: 6379
+#    password: 123456allow-bean-definition-overriding
+    ssl: false
+
+#redis
+# cache configuration
+resolved:
+  cache:
+    ttl: 60
+    enabled: true
+
 
 logging:
   level:
@@ -93,7 +108,12 @@ logging:
 #jwttoken
 app:
   jwtSecret: 9a02115a835ee03d5fb83cd8a468ea33e4090aaaec87f53c9fa54512bbef4db8dc656c82a315fa0c785c08b0134716b81ddcd0153d2a7556f2e154912cf5675f
-  tokenValidity: 604800000
+  # miliseconds
+#  tokenValidity: 3600000
+  tokenValidity: 600000
+  refreshTokenValidity: 604800000
 
-    
+
+
+
 
