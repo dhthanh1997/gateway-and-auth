@@ -313,7 +313,7 @@ objectclass: inetOrgPerson
 cn: hangdtt1
 sn: hangdtt1
 uid: hangdtt1
-userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
+userPassword:  123456a@
 
 
 dn: uid=luonglx,ou=people,dc=springframework,dc=org
@@ -324,7 +324,7 @@ objectclass: inetOrgPerson
 cn: luonglx
 sn: luonglx
 uid: luonglx
-userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
+userPassword:  123456a@
 
 
 dn: uid=syth,ou=people,dc=springframework,dc=org
@@ -335,7 +335,7 @@ objectclass: inetOrgPerson
 cn: syth
 sn: syth
 uid: syth
-userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
+userPassword:  123456a@
 
 
 dn: uid=ngocdtb5,ou=people,dc=springframework,dc=org
@@ -346,7 +346,7 @@ objectclass: inetOrgPerson
 cn: ngocdtb5
 sn: ngocdtb5
 uid: ngocdtb5
-userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
+userPassword:  123456a@
 
 dn: uid=hiennt10,ou=people,dc=springframework,dc=org
 objectclass: top
@@ -356,7 +356,7 @@ objectclass: inetOrgPerson
 cn: hiennt10
 sn: hiennt10
 uid: hiennt10
-userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
+userPassword:  123456a@
 
 
 dn: uid=lannt7,ou=people,dc=springframework,dc=org
@@ -367,7 +367,7 @@ objectclass: inetOrgPerson
 cn: lannt7
 sn: lannt7
 uid: lannt7
-userPassword:  $2a$10$m2S.Cvn2xKFAOVwlevqTSurIYY7EvdidVkrXT8lwFqm56cEKYlK5G
+userPassword:  123456a@
 
 
 dn: uid=trantuanvu8594,ou=people,dc=springframework,dc=org

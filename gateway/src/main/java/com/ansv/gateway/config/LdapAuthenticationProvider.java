@@ -9,6 +9,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.env.Environment;
 import org.springframework.ldap.core.AttributesMapper;
 import org.springframework.ldap.core.LdapTemplate;
@@ -75,7 +76,6 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
     private LdapTemplate ldapTemplate;
 
 
-
     private void initContext() {
         contextSource = new LdapContextSource();
         contextSource.setUrl(ldapUrl);
@@ -106,44 +106,43 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
 
         try {
 
-        ldapTemplate.authenticate(query, authentication.getCredentials().toString());
-        List<CustomUserDetails> users = ldapTemplate.search(query, new AttributesMapper() {
-            public CustomUserDetails mapFromAttributes(Attributes attributes) throws NamingException {
-                CustomUserDetails user = new CustomUserDetails();
-                String uid = (String) attributes.get("uid").get();
-                if(!DataUtils.isNullOrEmpty(attributes.get("sAMAccountName"))) {
+            ldapTemplate.authenticate(query, authentication.getCredentials().toString());
+            List<CustomUserDetails> users = ldapTemplate.search(query, new AttributesMapper() {
+                public CustomUserDetails mapFromAttributes(Attributes attributes) throws NamingException {
+                    CustomUserDetails user = new CustomUserDetails();
+                    String uid = (String) attributes.get("uid").get();
+                    if (!DataUtils.isNullOrEmpty(attributes.get("sAMAccountName"))) {
 
+                    }
+
+                    if (!DataUtils.isNullOrEmpty(attributes.get("displayName"))) {
+                        String displayName = (String) attributes.get("displayName").get();
+                        user.setDisplayName(displayName);
+                    } else {
+                        user.setDisplayName(uid);
+
+                    }
+                    if (!DataUtils.isNullOrEmpty(attributes.get("userPrincipalName"))) {
+                        String displayName = (String) attributes.get("userPrincipalName").get();
+                        user.setEmail(displayName);
+                    } else {
+                        user.setEmail(uid);
+
+                    }
+
+                    user.setUsername(uid);
+
+                    return user;
                 }
-
-                if(!DataUtils.isNullOrEmpty(attributes.get("displayName"))) {
-                    String displayName = (String) attributes.get("displayName").get();
-                    user.setDisplayName(displayName);
-                }
-                else {
-                    user.setDisplayName(uid);
-
-                }
-                if(!DataUtils.isNullOrEmpty(attributes.get("userPrincipalName"))) {
-                    String displayName = (String) attributes.get("userPrincipalName").get();
-                    user.setEmail(displayName);
-                } else {
-                    user.setEmail(uid);
-
-                }
-
-                user.setUsername(uid);
-
-                return user;
-            }
-        });
+            });
 
 
 //
-        UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
+            UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
 //            UserDetails userDetails = customUserDetailService.loadUserByUsername(authentication.getName());
-        Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
-                authentication.getCredentials().toString(), new ArrayList<>());
-        return auth;
+            Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
+                    authentication.getCredentials().toString(), new ArrayList<>());
+            return auth;
         } catch (Exception e) {
             //TODO: handle exception
             logger.error(e.getMessage(), e);

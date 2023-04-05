@@ -67,6 +67,7 @@ public class AuthenticationController {
                     loginRequest.getPassword()));
 //            Authentication authentication =
 
+
             List<String> permission = new ArrayList<>();
             UserDetails userDetails = null;
             Map<String, Object> mapper = null;
@@ -188,7 +189,7 @@ public class AuthenticationController {
             String jwtTokenNew = null;
 
             if(accessToken.isPresent()) {
-                username = jwtTokenProvider.getUsernameFromToken(accessToken.get().getUsername());
+                username = accessToken.get().getUsername();
             } else {
                 throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.INVALID_JWT_TOKEN.getName());
             }

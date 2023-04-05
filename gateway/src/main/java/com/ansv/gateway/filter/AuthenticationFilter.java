@@ -77,8 +77,8 @@ public class AuthenticationFilter implements GlobalFilter {
                 if (token.startsWith("Bearer")) {
                     jwtToken = token.substring(7);
                     boolean isValidated = jwtTokenProvider.validateToken(jwtToken);
-//                    username = jwtTokenProvider.getUsernameFromToken(jwtToken);
-//                    uuid = jwtTokenProvider.getUUID(jwtToken);
+                    username = jwtTokenProvider.getUsernameFromToken(jwtToken);
+                    uuid = jwtTokenProvider.getUUID(jwtToken);
 //                    if (!isValidated) {
 //                        if(this.jwtTokenProvider.getValidateError().equals(JwtExceptionEnum.EXPIRED_JWT_TOKEN)) {
 //                            throw new JwtTokenNotValidException("JWT token is expired");

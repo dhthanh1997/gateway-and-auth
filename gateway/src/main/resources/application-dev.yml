@@ -112,6 +112,9 @@ app:
 #  tokenValidity: 3600000
   tokenValidity: 600000
   refreshTokenValidity: 604800000
+  admin:
+    username: adminansv
+    password: 123456a@
 
 
 

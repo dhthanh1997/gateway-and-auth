@@ -262,16 +262,16 @@ public class GlobalRestExceptionHandler extends ResponseEntityExceptionHandler {
 //    }
 
 //    // token is null/ not valid
-//    @ExceptionHandler(ErrorWebException.class)
-//    protected Mono<ServerResponse> handleTokenNotValidException(ServerWebExchange exchange, ErrorWebException ex) {
-//
-//        exchange.getAttributes().putIfAbsent(ErrorAttributes.ERROR_ATTRIBUTE, ex);
-//
-//        ApiError apiError = new ApiError(HttpStatus.UNAUTHORIZED);
-//        apiError.setMessage("Unauthorized");
-//        apiError.addValidationError(ex.getMessage());
-//        return ServerResponse.from((ServerResponse) apiError).build();
-//    }
+    @ExceptionHandler(ErrorWebException.class)
+    protected Mono<ServerResponse> handleTokenNotValidException(ServerWebExchange exchange, ErrorWebException ex) {
+
+        exchange.getAttributes().putIfAbsent(ErrorAttributes.ERROR_ATTRIBUTE, ex);
+
+        ApiError apiError = new ApiError(HttpStatus.UNAUTHORIZED);
+        apiError.setMessage("Unauthorized");
+        apiError.addValidationError(ex.getMessage());
+        return ServerResponse.from((ServerResponse) apiError).build();
+    }
 
 
 }

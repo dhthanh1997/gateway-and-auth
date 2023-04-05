@@ -5,6 +5,7 @@ import com.ansv.gateway.dto.redis.RefreshToken;
 import com.ansv.gateway.repository.RedisRepository;
 import com.ansv.gateway.repository.redis.RedisTokenRepository;
 import com.ansv.gateway.util.DataUtils;
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.NonNull;
 import org.slf4j.Logger;
@@ -28,8 +29,12 @@ public class RedisServiceImpl implements RedisService {
     private static final String ACCESSTOKEN = "accessToken";
     private static final String REFRESHTOKEN = "refreshToken";
 
-    private ObjectMapper objectMapper = new ObjectMapper();
+    private final ObjectMapper objectMapper = new ObjectMapper();
 
+    public RedisServiceImpl() {
+        objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+        objectMapper.configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true);
+    }
 
     @Autowired
     private RedisRepository redisRepository;
@@ -82,9 +87,10 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public Optional<AccessToken> getAccessToken(String uuid) {
         try {
-            Object token = redisRepository.getTokenByObject(uuid, ACCESSTOKEN.trim());
+            Object token = redisRepository.getToken(uuid, ACCESSTOKEN.trim());
+            AccessToken accessToken = objectMapper.readValue(token.toString(), AccessToken.class);
             if (DataUtils.notNull(token)) {
-                return Optional.of((AccessToken) token);
+                return Optional.of(accessToken);
             }
             return Optional.empty();
         } catch (Exception e) {
@@ -125,9 +131,10 @@ public class RedisServiceImpl implements RedisService {
     @Override
     public Optional<RefreshToken> getRefreshToken(String uuid) {
         try {
-            Object token = redisRepository.getTokenByObject(uuid, REFRESHTOKEN.trim());
-            if (DataUtils.notNull(token)) {
-                return Optional.of((RefreshToken) token);
+            Object token = redisRepository.getToken(uuid, REFRESHTOKEN.trim());
+            RefreshToken refreshToken = objectMapper.readValue(token.toString(), RefreshToken.class);
+            if (DataUtils.notNull(refreshToken)) {
+                return Optional.of(refreshToken);
             }
             return Optional.empty();
         } catch (Exception e) {

@@ -26,56 +26,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_f4b6a3_ulid_creator_5_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_errorprone_error_prone_annotations_2_11_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_failureaccess_1_0_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_listenablefuture_9999_0_empty_to_avoid_conflict_with_guava.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_j2objc_j2objc_annotations_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_redis_om_redis_om_spring_0_6_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_redislabs_jrebloom_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_redislabs_jredisearch_2_2_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_redislabs_jrejson_1_5_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_javapoet_1_13_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_6_1_10_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_11_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_json_json_20210307.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_7_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_3_23.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__redis_clients_jedis_3_9_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/RedisConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/constants/JwtExceptionEnum.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/dto/redis/AccessToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/dto/redis/RefreshToken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/ApiError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/ApiSubError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/ApiValidattionError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/ErrorWebException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/GlobalRestExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/JwtTokenNotValidException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/LowerCaseClassNameResolver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/repository/RedisRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/repository/redis/RedisTokenRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/service/RedisService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/service/RedisServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_31_1_jre.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_2_2023_3_08_PM__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_3_2_2023_3_08_PM__Default_Changelist_.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/GlobalErrorAttributes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/GatewayApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/GatewayApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/LdapAuthSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/LdapAuthSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/LdapAuthSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/AuthSecurityConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/LdapAuthenticationProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/LdapAuthenticationProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/RouterValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/config/RouterValidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/filter/AuthenticationFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/filter/AuthenticationFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/filter/JwtTokenProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/filter/JwtTokenProvider.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/security/JwtAuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/security/JwtAuthenticationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/security/JwtTokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/security/JwtTokenResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/util/DataUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/util/DataUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/GlobalRestExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/GlobalRestExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/service/RedisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/service/RedisServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-prod.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-staging.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-staging.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/test-server.ldif" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/test-server.ldif" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -381,7 +344,13 @@
       <workItem from="1679621989101" duration="11012000" />
       <workItem from="1679881607058" duration="23900000" />
       <workItem from="1679966919100" duration="16957000" />
-      <workItem from="1680055562521" duration="16048000" />
+      <workItem from="1680055562521" duration="16397000" />
+      <workItem from="1680140613187" duration="10108000" />
+      <workItem from="1680227351655" duration="1288000" />
+      <workItem from="1680453506804" duration="791000" />
+      <workItem from="1680504279231" duration="7589000" />
+      <workItem from="1680572301360" duration="19343000" />
+      <workItem from="1680657837027" duration="5199000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -425,7 +394,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678445215685</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update">
+      <created>1680085496529</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1680085496529</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -469,10 +445,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="440" y="94" key="#Project_Structure/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676904476900" />
-    <state x="165" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1671522187553">
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1680579696366">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="165" y="38" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1671522187553" />
+    <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1680579696366" />
     <state x="498" y="115" key="#com.intellij.ide.util.MemberChooser" timestamp="1680065001578">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -482,97 +458,93 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="457" y="233" width="451" height="268" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1680064642580" />
-    <state x="404" y="108" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1671587888787">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="404" y="108" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1671587888787" />
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1678954201027">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="413" y="111" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1366.728@0.0.1366.728" timestamp="1678954201027" />
-    <state width="458" height="395" key="DebuggerActiveHint" timestamp="1679020993886">
+    <state width="458" height="395" key="DebuggerActiveHint" timestamp="1680601423506">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="458" height="395" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1679020993886" />
+    <state width="458" height="395" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1680601423506" />
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog" timestamp="1678870830678">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1678870830678" />
     <state x="129" y="131" width="1662" height="778" key="DiffContextDialog/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676905250952" />
-    <state width="1070" height="180" key="GridCell.Tab.0.bottom" timestamp="1680082016819">
+    <state width="1496" height="263" key="GridCell.Tab.0.bottom" timestamp="1680610660717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1680601798376" />
+    <state width="1496" height="263" key="GridCell.Tab.0.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660717" />
+    <state width="1496" height="263" key="GridCell.Tab.0.center" timestamp="1680610660717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1680601798375" />
+    <state width="1496" height="263" key="GridCell.Tab.0.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660717" />
+    <state width="1496" height="263" key="GridCell.Tab.0.left" timestamp="1680610660716">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1680601798375" />
+    <state width="1496" height="263" key="GridCell.Tab.0.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660716" />
+    <state width="1496" height="263" key="GridCell.Tab.0.right" timestamp="1680610660717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1680601798376" />
+    <state width="1496" height="263" key="GridCell.Tab.0.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660717" />
+    <state width="1496" height="263" key="GridCell.Tab.1.bottom" timestamp="1680610660717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1680601837464" />
+    <state width="1496" height="263" key="GridCell.Tab.1.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660717" />
+    <state width="1496" height="263" key="GridCell.Tab.1.center" timestamp="1680610660717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1680601837464" />
+    <state width="1496" height="263" key="GridCell.Tab.1.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660717" />
+    <state width="1496" height="263" key="GridCell.Tab.1.left" timestamp="1680610660717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1680601837464" />
+    <state width="1496" height="263" key="GridCell.Tab.1.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660717" />
+    <state width="1496" height="263" key="GridCell.Tab.1.right" timestamp="1680610660717">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1680601837464" />
+    <state width="1496" height="263" key="GridCell.Tab.1.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660717" />
+    <state width="1496" height="263" key="GridCell.Tab.2.bottom" timestamp="1680610660718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1680601798377" />
+    <state width="1496" height="263" key="GridCell.Tab.2.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660718" />
+    <state width="1496" height="263" key="GridCell.Tab.2.center" timestamp="1680610660718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1680601798376" />
+    <state width="1496" height="263" key="GridCell.Tab.2.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660718" />
+    <state width="1496" height="263" key="GridCell.Tab.2.left" timestamp="1680610660718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1680601798376" />
+    <state width="1496" height="263" key="GridCell.Tab.2.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660718" />
+    <state width="1496" height="263" key="GridCell.Tab.2.right" timestamp="1680610660718">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1047" height="263" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1680601798376" />
+    <state width="1496" height="263" key="GridCell.Tab.2.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1680610660718" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1680085501611">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1070" height="180" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1680082016819" />
-    <state width="1566" height="308" key="GridCell.Tab.0.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668246" />
-    <state width="1070" height="180" key="GridCell.Tab.0.center" timestamp="1680082016818">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1680082016818" />
-    <state width="1566" height="308" key="GridCell.Tab.0.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668246" />
-    <state width="1070" height="180" key="GridCell.Tab.0.left" timestamp="1680082016818">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1680082016818" />
-    <state width="1566" height="308" key="GridCell.Tab.0.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668245" />
-    <state width="1070" height="180" key="GridCell.Tab.0.right" timestamp="1680082016819">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1680082016819" />
-    <state width="1566" height="308" key="GridCell.Tab.0.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668246" />
-    <state width="1070" height="180" key="GridCell.Tab.1.bottom" timestamp="1680082345174">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1680082345174" />
-    <state width="1566" height="308" key="GridCell.Tab.1.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668246" />
-    <state width="1070" height="180" key="GridCell.Tab.1.center" timestamp="1680082345173">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1680082345173" />
-    <state width="1566" height="308" key="GridCell.Tab.1.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668246" />
-    <state width="1070" height="180" key="GridCell.Tab.1.left" timestamp="1680082345173">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1680082345173" />
-    <state width="1566" height="308" key="GridCell.Tab.1.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668246" />
-    <state width="1070" height="180" key="GridCell.Tab.1.right" timestamp="1680082345174">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1680082345174" />
-    <state width="1566" height="308" key="GridCell.Tab.1.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668246" />
-    <state width="1070" height="180" key="GridCell.Tab.2.bottom" timestamp="1680082016820">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.2.bottom/0.0.1366.728@0.0.1366.728" timestamp="1680082016820" />
-    <state width="1566" height="308" key="GridCell.Tab.2.bottom/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668247" />
-    <state width="1070" height="180" key="GridCell.Tab.2.center" timestamp="1680082016820">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.2.center/0.0.1366.728@0.0.1366.728" timestamp="1680082016820" />
-    <state width="1566" height="308" key="GridCell.Tab.2.center/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668247" />
-    <state width="1070" height="180" key="GridCell.Tab.2.left" timestamp="1680082016820">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.2.left/0.0.1366.728@0.0.1366.728" timestamp="1680082016820" />
-    <state width="1566" height="308" key="GridCell.Tab.2.left/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668247" />
-    <state width="1070" height="180" key="GridCell.Tab.2.right" timestamp="1680082016820">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1070" height="180" key="GridCell.Tab.2.right/0.0.1366.728@0.0.1366.728" timestamp="1680082016820" />
-    <state width="1566" height="308" key="GridCell.Tab.2.right/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679247668247" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1678874922953">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1678874922953" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1680085501611" />
     <state x="387" y="139" key="Vcs.Push.Dialog.v2/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1677691854592" />
-    <state width="691" height="385" key="XDebugger.FullValuePopup" timestamp="1679971981022">
+    <state width="691" height="385" key="XDebugger.FullValuePopup" timestamp="1680577150026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="691" height="385" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1679971981022" />
+    <state width="691" height="385" key="XDebugger.FullValuePopup/0.0.1366.728@0.0.1366.728" timestamp="1680577150026" />
     <state width="972" height="530" key="XDebugger.FullValuePopup/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1677991312642" />
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1678261722979">
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1680577867306">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="92" y="92" width="1182" height="544" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1678261722979" />
+    <state x="92" y="92" width="1182" height="544" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1366.728@0.0.1366.728" timestamp="1680577867306" />
     <state x="454" y="193" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1680062038026">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -589,10 +561,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="339" y="162" width="672" height="677" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1678261847265" />
-    <state x="363" y="152" width="672" height="574" key="search.everywhere.popup" timestamp="1679969910127">
+    <state x="363" y="152" width="672" height="574" key="search.everywhere.popup" timestamp="1680600424115">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="363" y="152" width="672" height="574" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1679969910127" />
+    <state x="363" y="152" width="672" height="574" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1680600424115" />
     <state x="510" y="217" width="945" height="820" key="search.everywhere.popup/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1679241993173" />
   </component>
   <component name="XDebuggerManager">
@@ -665,16 +637,6 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/filter/AuthenticationFilter.java</url>
-          <line>76</line>
-          <option name="timeStamp" value="51" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/filter/JwtTokenProvider.java</url>
-          <line>116</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/filter/AuthenticationFilter.java</url>
           <line>132</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
@@ -684,24 +646,19 @@
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/GlobalRestExceptionHandler.java</url>
-          <line>267</line>
-          <option name="timeStamp" value="61" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/controller/AuthenticationController.java</url>
-          <line>153</line>
+          <line>154</line>
           <option name="timeStamp" value="63" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/controller/AuthenticationController.java</url>
-          <line>184</line>
-          <option name="timeStamp" value="64" />
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/GlobalRestExceptionHandler.java</url>
+          <line>269</line>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/filter/AuthenticationFilter.java</url>
-          <line>58</line>
-          <option name="timeStamp" value="65" />
+          <url>file://$PROJECT_DIR$/gateway/src/main/java/com/ansv/gateway/handler/GlobalErrorAttributes.java</url>
+          <line>34</line>
+          <option name="timeStamp" value="77" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/authorization-server/src/main/java/com/ansv/authorizationserver/LdapAuthenticationProvider.java</url>

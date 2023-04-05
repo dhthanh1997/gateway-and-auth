@@ -128,6 +128,7 @@ public class JwtTokenProvider {
             throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.JWT_CLAIMS_EMPTY.getName());
 
         }
+
     }
 
     public String getUUID(String token) {
