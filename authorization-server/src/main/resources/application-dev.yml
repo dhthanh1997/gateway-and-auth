@@ -62,12 +62,12 @@ spring:
     username: guest
     password: guest
     virtualHost: /
-    exchange: task-management.req.events
-    routingkey: detail.user.req
-    queue: detail.user.task-management.req.queue
-    exchange-received: user-received.exchange
-    routingkey-received: user-received.routingkey
-    queue-received: user-received.queue
+    exchange: task-management.res.events
+    routingkey: detail.user.res
+    queue: detail.user.task-management.res.queue
+    exchange-received: task-management.req.events
+    routingkey-received: detail.user.req
+    queue-received: detail.user.task-management.req.queue
 
 logging:
   level:

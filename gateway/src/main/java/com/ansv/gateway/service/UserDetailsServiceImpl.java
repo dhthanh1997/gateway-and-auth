@@ -4,6 +4,7 @@ import com.ansv.gateway.dto.mapper.UserMapper;
 import com.ansv.gateway.dto.response.UserDTO;
 import com.ansv.gateway.model.UserEntity;
 import com.ansv.gateway.repository.UserEntityRepository;
+import com.ansv.gateway.service.rabbitmq.RabbitMqSender;
 import com.ansv.gateway.util.DataUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +25,8 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
     @Autowired
     private UserEntityRepository userRepository;
 
+    @Autowired
+    private RabbitMqSender rabbitMqSender;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -46,7 +49,11 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
             }
             user.setStatus("ACTIVE");
             userRepository.save(user);
+//            UserDTO userDTO = new UserDTO();
+//            userDTO = UserMapper.INSTANCE.modelToDTO(user);
+//            rabbitMqSender.sender(userDTO);
             newUser = new User(user.getUsername(), user.getEmail(), buildSimpleGrantedAuthorities("user"));
+
             return newUser;
         }
         return newUser;
@@ -95,6 +102,9 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
             user.setFullname(displayName);
             user.setStatus("ACTIVE");
             userRepository.save(user);
+            UserDTO userDTO = new UserDTO();
+            userDTO = UserMapper.INSTANCE.modelToDTO(user);
+            rabbitMqSender.sender(userDTO);
             newUser = new User(username, email, buildSimpleGrantedAuthorities("user"));
             return newUser;
         }

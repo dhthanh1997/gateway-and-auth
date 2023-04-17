@@ -87,6 +87,19 @@ spring:
     port: 6379
 #    password: 123456allow-bean-definition-overriding
     ssl: false
+  # Rabbitmq properties
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+    virtualHost: /
+    exchange: task-management.req.events
+    routingkey: detail.user.req
+    queue: detail.user.task-management.req.queue
+    exchange-received: task-management.res.events
+    routingkey-received: detail.user.res
+    queue-received: detail.user.task-management.res.queue
 
 #redis
 # cache configuration
@@ -115,6 +128,8 @@ app:
   admin:
     username: adminansv
     password: 123456a@
+
+
 
 
 
