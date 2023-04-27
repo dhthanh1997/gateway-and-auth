@@ -5,13 +5,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.reactive.error.DefaultErrorAttributes;
+import org.springframework.boot.web.reactive.error.ErrorWebExceptionHandler;
 import org.springframework.core.annotation.MergedAnnotation;
 import org.springframework.core.annotation.MergedAnnotations;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerRequest;
+import org.springframework.web.reactive.function.server.ServerResponse;
 import org.springframework.web.server.ResponseStatusException;
+import org.springframework.web.server.ServerWebExchange;
+import reactor.core.publisher.Mono;
 
 import java.util.Date;
 import java.util.LinkedHashMap;
@@ -39,15 +45,16 @@ public class GlobalErrorAttributes extends DefaultErrorAttributes {
         logger.info("errorStatus: {}", errorStatus.value());
         Map<String, Object> map = super.getErrorAttributes(request, options);
         String errorCode = getErrorCode(map, errorStatus);
-        map.remove("timestamp");
-        map.remove("path");
-        map.remove("error");
+//        map.remove("timestamp");
+//        map.remove("path");
+//        map.remove("error");
         map.remove("requestId");
         map.remove("trace");
         map.put("errorCode", errorCode);
         return map;
     }
 
+    // Copy from DefaultErrorWebexceptionHandler
     private HttpStatus findHttpStatus(Throwable error, MergedAnnotation<ResponseStatus> responseStatusAnnotation) {
         if (error instanceof ResponseStatusException) {
             return ((ResponseStatusException) error).getStatus();
@@ -78,7 +85,5 @@ public class GlobalErrorAttributes extends DefaultErrorAttributes {
         }
         return errorCode;
     }
-
-
 
 }

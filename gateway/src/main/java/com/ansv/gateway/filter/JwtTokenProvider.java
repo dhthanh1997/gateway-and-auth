@@ -2,14 +2,12 @@ package com.ansv.gateway.filter;
 
 import com.ansv.gateway.constants.JwtExceptionEnum;
 import com.ansv.gateway.handler.ErrorWebException;
-import com.ansv.gateway.handler.JwtTokenNotValidException;
 import io.jsonwebtoken.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.ldap.userdetails.LdapUserDetailsImpl;
 import org.springframework.stereotype.Component;
 
@@ -22,7 +20,7 @@ public class JwtTokenProvider {
     private static final long serialVersionUID = -2550185165626007488L;
     private static final Logger logger = LoggerFactory.getLogger(JwtTokenProvider.class);
 
-    private String validateError = new String();
+    public String validateError = new String();
 
 
     //   clientId
@@ -107,28 +105,28 @@ public class JwtTokenProvider {
             return true;
         } catch (SignatureException e) {
             logger.error("Invalid JWT signature", e);
-//            this.validateError = JwtExceptionEnum.INVALID_JWT_SIGNATURE.getName();
-            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.INVALID_JWT_SIGNATURE.getName());
+            this.validateError = JwtExceptionEnum.INVALID_JWT_SIGNATURE.getName();
+//            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.INVALID_JWT_SIGNATURE.getName());
         } catch (MalformedJwtException e) {
             logger.error("Invalid JWT Token ");
-//            this.validateError = JwtExceptionEnum.INVALID_JWT_TOKEN.getName();
-            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.INVALID_JWT_TOKEN.getName());
+            this.validateError = JwtExceptionEnum.INVALID_JWT_TOKEN.getName();
+//            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.INVALID_JWT_TOKEN.getName());
         } catch (ExpiredJwtException e) {
             logger.error("Expired JWT Token");
-//            this.validateError = JwtExceptionEnum.EXPIRED_JWT_TOKEN.getName();
-            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.EXPIRED_JWT_TOKEN.getName());
+            this.validateError = JwtExceptionEnum.EXPIRED_JWT_TOKEN.getName();
+//            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.EXPIRED_JWT_TOKEN.getName());
         } catch (UnsupportedJwtException e) {
             logger.error("Unsupported JWT Token");
-//            this.validateError = JwtExceptionEnum.UNSUPPORT_JWT_TOKEN.getName();
-            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.UNSUPPORT_JWT_TOKEN.getName());
+            this.validateError = JwtExceptionEnum.UNSUPPORT_JWT_TOKEN.getName();
+//            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.UNSUPPORT_JWT_TOKEN.getName());
 
         } catch (IllegalArgumentException e) {
             logger.error("JWT claims string is empty");
-//            this.validateError = JwtExceptionEnum.JWT_CLAIMS_EMPTY.getName();
-            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.JWT_CLAIMS_EMPTY.getName());
+            this.validateError = JwtExceptionEnum.JWT_CLAIMS_EMPTY.getName();
+//            throw new ErrorWebException(HttpStatus.UNAUTHORIZED, JwtExceptionEnum.JWT_CLAIMS_EMPTY.getName());
 
         }
-
+        return false;
     }
 
     public String getUUID(String token) {

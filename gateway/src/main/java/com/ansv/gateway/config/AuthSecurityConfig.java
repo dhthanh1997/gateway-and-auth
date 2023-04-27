@@ -1,8 +1,5 @@
 package com.ansv.gateway.config;
 
-import com.ansv.gateway.filter.AuthenticationFilter;
-import com.ansv.gateway.filter.JwtRequestFilter;
-import com.ansv.gateway.filter.LoggingGlobalFilter;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -37,9 +34,6 @@ public class AuthSecurityConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthSecurityConfig.class);
     private final UserDetailsService userDetailsService;
-    private final JwtRequestFilter jwtRequestFilter;
-    private final AuthenticationFilter authenticationFilter;
-    private final LoggingGlobalFilter loggingGlobalFilter;
     private Environment env;
 
     @Autowired
@@ -73,7 +67,7 @@ public class AuthSecurityConfig {
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
         http.csrf(csrf -> csrf.disable());
-        http.cors().disable();
+        http.cors();
         return http.build();
     }
 

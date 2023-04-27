@@ -28,7 +28,13 @@ spring:
         corsConfigurations:
           '[/**]':
             allowedOrigins: "*"
-            allowedMethods: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PUT
+              - OPTIONS
+              - HEAD
             allowedHeaders: "*"
       routes:
         - id: app1
@@ -43,7 +49,7 @@ spring:
           uri: http://localhost:8098
           predicates:
             - Path=/taskManagement/**
-            - Method=GET,POST,PUT,DELETE
+            - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
 #        - id: authorization
 #          uri: http://localhost:8053
 #          predicates:
