@@ -4,6 +4,7 @@ import com.ansv.gateway.dto.mapper.UserMapper;
 import com.ansv.gateway.dto.response.UserDTO;
 import com.ansv.gateway.model.UserEntity;
 import com.ansv.gateway.repository.UserEntityRepository;
+import com.ansv.gateway.service.rabbitmq.RabbitMqReceiver;
 import com.ansv.gateway.service.rabbitmq.RabbitMqSender;
 import com.ansv.gateway.util.DataUtils;
 import lombok.extern.slf4j.Slf4j;
@@ -28,6 +29,9 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
     @Autowired
     private RabbitMqSender rabbitMqSender;
 
+    @Autowired
+    private RabbitMqReceiver rabbitMqReceiver;
+
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         UserEntity user = userRepository.findByUsername(username);
@@ -44,7 +48,7 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
             log.warn("User not found with username ----> create in db", username);
             user = new UserEntity();
             user.setUsername(username);
-            if(DataUtils.isNullOrEmpty(user.getEmail())) {
+            if (DataUtils.isNullOrEmpty(user.getEmail())) {
                 user.setEmail(username);
             }
             user.setStatus("ACTIVE");
@@ -116,5 +120,18 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
         UserEntity entity = userRepository.findByUsername(username);
         UserDTO dto = UserMapper.INSTANCE.modelToDTO(entity);
         return dto;
+    }
+
+    @Override
+    public UserDetails loadUserDetails(String username, String displayName, String email) {
+        UserDTO item = new UserDTO().builder().username(username).fullName(displayName).email(email).build();
+        rabbitMqSender.senderUserObject(item);
+        UserDTO userDTO = rabbitMqReceiver.userDTO;
+        if (DataUtils.notNull(userDTO)) {
+            User user = new User(username, email, buildSimpleGrantedAuthorities("user"));
+            return user;
+        }
+        return null;
+
     }
 }

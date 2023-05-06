@@ -3,6 +3,8 @@ package com.ansv.gateway.config;
 import com.ansv.gateway.service.CustomUserDetailService;
 import com.ansv.gateway.service.CustomUserDetails;
 import com.ansv.gateway.service.RedisService;
+import com.ansv.gateway.service.rabbitmq.RabbitMqReceiver;
+import com.ansv.gateway.service.rabbitmq.RabbitMqSender;
 import com.ansv.gateway.util.DataUtils;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -141,7 +143,8 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
 
 
 //
-            UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
+//            UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
+            UserDetails userDetails = customUserDetailService.loadUserDetails(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
 //            UserDetails userDetails = customUserDetailService.loadUserByUsername(authentication.getName());
             Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
                     authentication.getCredentials().toString(), new ArrayList<>());

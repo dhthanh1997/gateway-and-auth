@@ -50,6 +50,11 @@ spring:
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
+        - id: human-resource
+          uri: http://localhost:8099
+          predicates:
+            - Path=/humanResource/**
+            - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
 #        - id: authorization
 #          uri: http://localhost:8053
 #          predicates:
@@ -100,12 +105,16 @@ spring:
     username: guest
     password: guest
     virtualHost: /
-    exchange: task-management.req.events
+    exchange: request.events
     routingkey: detail.user.req
     queue: detail.user.task-management.req.queue
-    exchange-received: task-management.res.events
+    routingkey-human: user.human.req
+    queue-human: user.human-resource.req.queue
+    exchange-received: response.events
     routingkey-received: detail.user.res
     queue-received: detail.user.task-management.res.queue
+    routingkey-human-received: user.human.res
+    queue-human-received: user.human-resource.res.queue
 
 #redis
 # cache configuration
@@ -129,7 +138,7 @@ app:
   jwtSecret: 9a02115a835ee03d5fb83cd8a468ea33e4090aaaec87f53c9fa54512bbef4db8dc656c82a315fa0c785c08b0134716b81ddcd0153d2a7556f2e154912cf5675f
   # miliseconds
 #  tokenValidity: 3600000
-  tokenValidity: 600000
+  tokenValidity: 6000000
   refreshTokenValidity: 604800000
   admin:
     username: adminansv

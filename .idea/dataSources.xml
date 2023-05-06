@@ -7,5 +7,11 @@
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://localhost:5432/Authorization</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="HumanResourceManagement@localhost" uuid="2aef3ccd-108f-4531-bf8b-be492275b805">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/HumanResourceManagement</jdbc-url>
+    </data-source>
   </component>
 </project>
