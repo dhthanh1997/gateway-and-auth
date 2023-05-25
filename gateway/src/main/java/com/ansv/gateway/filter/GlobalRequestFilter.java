@@ -91,7 +91,7 @@ public class GlobalRequestFilter implements GlobalFilter, Ordered {
 
             // Once we get the token validate it.
             if (username != null && (authentication == null || "anonymousUser".equals(authentication.getPrincipal()))) {
-                UserDetails userDetails = this.userDetailsServiceImpl.loadUserByUsername(username);
+                UserDetails userDetails = this.userDetailsServiceImpl.loadUserByUsernameFromHumanResource(username);
                 // if token is valid configure Spring Security to manually set authentication
                 if (jwtTokenUtil.validateToken(jwtToken, userDetails)) {
                     UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
@@ -101,14 +101,14 @@ public class GlobalRequestFilter implements GlobalFilter, Ordered {
                     SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
                 } else {
                     // check if refreshtoken
-                    if (request.getURI().equals("/auth/refreshTokenClient") && userDetails.getUsername().equals(username)) {
-                        Optional<AccessToken> accessToken = redisService.getAccessToken(uuid);
-                        Optional<RefreshToken> refreshToken = redisService.getRefreshToken(uuid);
-                        if (accessToken.isPresent() && refreshToken.isPresent()) {
-                            UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
-                            SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
-                        }
-                    }
+//                    if (request.getURI().equals("/auth/refreshToken") && userDetails.getUsername().equals(username)) {
+//                        Optional<AccessToken> accessToken = redisService.getAccessToken(uuid);
+//                        Optional<RefreshToken> refreshToken = redisService.getRefreshToken(uuid);
+//                        if (accessToken.isPresent() && refreshToken.isPresent()) {
+//                            UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+//                            SecurityContextHolder.getContext().setAuthentication(usernamePasswordAuthenticationToken);
+//                        }
+//                    }
                 }
 
             }

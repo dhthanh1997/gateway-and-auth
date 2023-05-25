@@ -1,5 +1,6 @@
 package com.ansv.gateway.config;
 
+import com.ansv.gateway.service.rabbitmq.RabbitMqSender;
 import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,10 +35,14 @@ public class AuthSecurityConfig {
 
     private static final Logger logger = LoggerFactory.getLogger(AuthSecurityConfig.class);
     private final UserDetailsService userDetailsService;
+    private final RabbitMqSender rabbitMqSender;
     private Environment env;
 
-    @Autowired
-    private LdapAuthenticationProvider ldapAuthenticationProvider;
+//    @Autowired
+//    private LdapAuthenticationProvider ldapAuthenticationProvider;
+//
+//    @Autowired
+//    private InMemoryAuthenticationProvider inMemoryAuthenticationProvider;
 
     @Value("${app.admin.username:#{null}}")
     private String username;
@@ -104,14 +109,21 @@ public class AuthSecurityConfig {
         AuthenticationManagerBuilder authenticationManagerBuilder = http.getSharedObject(AuthenticationManagerBuilder.class);
 
 //            authenticationManagerBuilder.authenticationProvider(ldapAuthenticationProvider);
+//        authenticationManagerBuilder.inMemoryAuthentication()
+//                .withUser(username)
+//                .password(bCryptPasswordEncoder().encode(password))
+//                .roles("ADMIN");
 
-        authenticationManagerBuilder.authenticationProvider(new LdapAuthenticationProvider(env, ldapUrl, baseDn, managerDn,
-                managerPassword, searchFilter, userDetailsService));
+        // create authentication provider with inmemory authentication and ldap authentication
 
-        authenticationManagerBuilder.inMemoryAuthentication()
-                .withUser(username)
-                .password(bCryptPasswordEncoder().encode(password))
-                .roles("ADMIN");
+        authenticationManagerBuilder
+                .authenticationProvider(new LdapAuthenticationProvider(env, ldapUrl, baseDn, managerDn,
+                        managerPassword, searchFilter, userDetailsService));
+
+        authenticationManagerBuilder.authenticationProvider(new InMemoryAuthenticationProvider(username, password, userDetailsService));
+
+
+//        authenticationManagerBuilder.inMemoryAuthentication().;
 
         authenticationManagerBuilder.eraseCredentials(false);
 

@@ -18,4 +18,8 @@ public interface CustomUserDetailService extends UserDetailsService {
     // using with rabbitmq
     UserDetails loadUserDetails(String username, String displayName, String email);
 
+    UserDetails loadUserByUsernameForInmemoryAuth(String username, String password);
+
+    UserDetails loadUserByUsernameFromHumanResource(String username) ;
+
 }

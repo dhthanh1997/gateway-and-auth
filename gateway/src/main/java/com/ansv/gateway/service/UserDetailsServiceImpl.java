@@ -9,12 +9,18 @@ import com.ansv.gateway.service.rabbitmq.RabbitMqSender;
 import com.ansv.gateway.util.DataUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,6 +28,12 @@ import java.util.List;
 @Service
 @Slf4j
 public class UserDetailsServiceImpl implements CustomUserDetailService {
+
+    @Value("${app.admin.username:#{null}}")
+    private String usernameAdmin;
+
+    @Value("${app.admin.password:#{null}}")
+    private String passwordAdmin;
 
     @Autowired
     private UserEntityRepository userRepository;
@@ -31,6 +43,7 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
 
     @Autowired
     private RabbitMqReceiver rabbitMqReceiver;
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -53,9 +66,6 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
             }
             user.setStatus("ACTIVE");
             userRepository.save(user);
-//            UserDTO userDTO = new UserDTO();
-//            userDTO = UserMapper.INSTANCE.modelToDTO(user);
-//            rabbitMqSender.sender(userDTO);
             newUser = new User(user.getUsername(), user.getEmail(), buildSimpleGrantedAuthorities("user"));
 
             return newUser;
@@ -126,6 +136,7 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
     public UserDetails loadUserDetails(String username, String displayName, String email) {
         UserDTO item = new UserDTO().builder().username(username).fullName(displayName).email(email).build();
         rabbitMqSender.senderUserObject(item);
+        rabbitMqSender.sender(item);
         UserDTO userDTO = rabbitMqReceiver.userDTO;
         if (DataUtils.notNull(userDTO)) {
             User user = new User(username, email, buildSimpleGrantedAuthorities("user"));
@@ -133,5 +144,31 @@ public class UserDetailsServiceImpl implements CustomUserDetailService {
         }
         return null;
 
+    }
+
+    @Override
+    public UserDetails loadUserByUsernameForInmemoryAuth(String username, String password) {
+        if (DataUtils.notNullOrEmpty(username) && DataUtils.notNullOrEmpty(password)) {
+            if(username.equals(usernameAdmin) && password.equals(passwordAdmin)) {
+                UserDTO item = new UserDTO().builder().username(username).fullName(username).email(username).build();
+                rabbitMqSender.senderUserObject(item);
+                rabbitMqSender.sender(item);
+                User user = new User(username, username, buildSimpleGrantedAuthorities("ADMIN"));
+                return user;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public UserDetails loadUserByUsernameFromHumanResource(String username) {
+        UserDTO item = new UserDTO().builder().username(username).fullName(username).email(username).build();
+        rabbitMqSender.senderUsernamToHuman(item);
+        UserDTO userDTO = rabbitMqReceiver.userDTO;
+        if (DataUtils.notNull(userDTO)) {
+            User user = new User(username, userDTO.getEmail(), buildSimpleGrantedAuthorities("user"));
+            return user;
+        }
+        return null;
     }
 }

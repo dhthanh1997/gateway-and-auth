@@ -28,8 +28,8 @@ public class RabbitMqSender {
     @Autowired
     private AmqpTemplate rabbitTemplate;
 
-    @Autowired
-    private RabbitMqReceiver rabbitMqReceiver;
+//    @Autowired
+//    private RabbitMqReceiver rabbitMqReceiver;
 
     @Value("${spring.rabbitmq.exchange:#{null}}")
     private String exchange;
@@ -40,7 +40,6 @@ public class RabbitMqSender {
     @Value("${spring.rabbitmq.routingkey-human:#{null}}")
     private String routingkeyHuman;
 
-//    private final Queue replyQueue;
 
     private final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -49,9 +48,17 @@ public class RabbitMqSender {
         objectMapper.configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true);
     }
 
+    // sender to task service
     public void sender(UserDTO user) {
         rabbitTemplate.convertAndSend(exchange, routingkey, user);
     }
+    // end
+
+    // sender to human service
+    public void senderUsernamToHuman(UserDTO user) {
+        rabbitTemplate.convertAndSend(exchange, routingkeyHuman, user);
+    }
+    // end
 
     public void senderUserObject(UserDTO item) {
 
