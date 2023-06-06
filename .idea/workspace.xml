@@ -26,9 +26,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-prod.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-staging.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-staging.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/Dockerfile" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,7 +394,7 @@
       <workItem from="1684979454670" duration="7157000" />
       <workItem from="1685070520409" duration="1933000" />
       <workItem from="1685325970751" duration="4006000" />
-      <workItem from="1686021730694" duration="2880000" />
+      <workItem from="1686021730694" duration="3541000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -482,7 +480,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685008831289</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="update">
+      <created>1686025160857</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1686025160857</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -532,10 +537,6 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="309" y="42" key="#Inspections/0.0.1366.728@0.0.1366.728" timestamp="1678182076405" />
-    <state x="440" y="94" key="#Project_Structure" timestamp="1676904476900">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="440" y="94" key="#Project_Structure/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676904476900" />
     <state x="275" y="22" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1683196578336">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -561,7 +562,6 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="92" y="92" width="1182" height="544" key="DiffContextDialog/0.0.1366.728@0.0.1366.728" timestamp="1682411113864" />
-    <state x="129" y="131" width="1662" height="778" key="DiffContextDialog/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1676905250952" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1683165264112">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -630,10 +630,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1683878938711" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1685008841112">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1686025166637">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1685008841112" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1686025166637" />
     <state x="387" y="139" key="Vcs.Push.Dialog.v2/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1677691854592" />
     <state width="691" height="385" key="XDebugger.FullValuePopup" timestamp="1684486791026">
       <screen x="0" y="0" width="1366" height="728" />
