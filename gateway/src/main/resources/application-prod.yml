@@ -46,15 +46,15 @@ spring:
           predicates:
             - Path=/app2/**
         - id: task-management
-            uri: http://host.docker.internal:8098
-            predicates:
-              - Path=/taskManagement/**
-              - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
+          uri: http://host.docker.internal:8098
+          predicates:
+            - Path=/taskManagement/**
+            - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
         - id: human-resource
-            uri: http://host.docker.internal:8099
-            predicates:
-              - Path=/humanResource/**
-              - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
+          uri: http://host.docker.internal:8099
+          predicates:
+            - Path=/humanResource/**
+            - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
       httpserver:
         wiretap: true
 
