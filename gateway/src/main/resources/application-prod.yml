@@ -1,5 +1,6 @@
 server:
   port: 8055
+  address: 172.17.0.99
 
 eureka:
   client:
@@ -86,12 +87,12 @@ spring:
   # redis configuration for caching
   cache:
     type: redis
-    host: hos.docker.internal
+    host: 172.17.0.6
     port: 6379
     password: password
     ssl: false
   rabbitmq:
-    host: host.docker.internal
+    host: 172.17.0.5
     port: 5672
     username: guest
     password: guest
