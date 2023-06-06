@@ -1,6 +1,6 @@
 ### STAGE 1: PREPARING AND MAVEN BUILDING
 FROM maven:3.8.5-openjdk-11 AS builders
-COPY pom.xml /app/
+COPY ./gateway/pom.xml /app/
 COPY ./gateway/src /app/src
 WORKDIR /app/
 #RUN mvn clean test
