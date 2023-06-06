@@ -4,7 +4,7 @@ COPY pom.xml /app/
 COPY src /app/src
 WORKDIR /app/
 #RUN mvn clean test
-RUN mvn clean install
+RUN mvn clean install -P prod
 
 
 ### STAGE 2: DEPLOY APP
