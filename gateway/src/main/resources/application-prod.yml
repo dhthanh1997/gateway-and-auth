@@ -71,7 +71,7 @@ spring:
 
   datasource:
     url: jdbc:postgresql://host.docker.internal:5432/Authorization
-    username: postgres
+    username: ansv
     password: root
     jpa:
       properties:
