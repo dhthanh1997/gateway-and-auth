@@ -69,20 +69,20 @@ spring:
       password: userPassword
       dn-partterns: CN=Users,DC=ansv,DC=vn
 
-  datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/Authorization
-    username: ansv
-    password: root
-    jpa:
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-      show-sql: true
-      hibernate:
-        ddl-auto: none
-  liquibase:
-    enabled: false
-    contexts: prod
+#  datasource:
+#    url: jdbc:postgresql://host.docker.internal:5432/Authorization
+#    username: ansv
+#    password: root
+#    jpa:
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.PostgreSQLDialect
+#      show-sql: true
+#      hibernate:
+#        ddl-auto: none
+#  liquibase:
+#    enabled: false
+#    contexts: prod
   # redis configuration for caching
   cache:
     type: redis
