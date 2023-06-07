@@ -1,11 +1,11 @@
 server:
   port: 8055
-  address: 172.17.0.99
+#  address: 172.17.0.99
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.17.0.7:8052/eureka
+      defaultZone: http://172.17.0.7:8052/eureka/
     register-with-eureka: true
     fetch-registry: true
   instance:
