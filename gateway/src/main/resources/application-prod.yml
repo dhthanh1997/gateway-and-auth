@@ -83,7 +83,7 @@ spring:
 #        ddl-auto: none
   liquibase:
     enabled: false
-#    contexts: prod
+    contexts: prod
   # redis configuration for caching
   cache:
     type: redis
