@@ -5,11 +5,11 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://host.docker.internal:8052/eureka
+      defaultZone: http://172.17.0.7:8052/eureka
     register-with-eureka: true
     fetch-registry: true
   instance:
-    hostname: host.docker.internal
+    hostname: 172.17.0.7
 
 
 spring:
