@@ -46,15 +46,15 @@ spring:
           predicates:
             - Path=/app2/**
         - id: task-management
-            uri: http://host.docker.internal:8098
-            predicates:
-              - Path=/taskManagement/**
-              - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
+          uri: http://host.docker.internal:8098
+          predicates:
+            - Path=/taskManagement/**
+            - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
         - id: human-resource
-            uri: http://host.docker.internal:8099
-            predicates:
-              - Path=/humanResource/**
-              - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
+          uri: http://host.docker.internal:8099
+          predicates:
+            - Path=/humanResource/**
+            - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
       httpserver:
         wiretap: true
 
@@ -62,24 +62,25 @@ spring:
     server:
       base: CN=Users,DC=ansv,DC=vn
     authen:
-      url: ldap://172.24.104.6:389
+      url: ldap://172.24.104.6
+      port: 389
       managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
       managerPassword: 123456
       filter: userPrincipalName={0}
-#      password: userPassword
+      #      password: userPassword
       dn-partterns: CN=Users,DC=ansv,DC=vn
 
-  datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/Authorization
-    username: postgres
-    password: root
-    jpa:
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-      show-sql: true
-      hibernate:
-        ddl-auto: none
+  #  datasource:
+  #    url: jdbc:postgresql://host.docker.internal:5432/Authorization
+  #    username: postgres
+  #    password: root
+  #    jpa:
+  #      properties:
+  #        hibernate:
+  #          dialect: org.hibernate.dialect.PostgreSQLDialect
+  #      show-sql: true
+  #      hibernate:
+  #        ddl-auto: none
   liquibase:
     enabled: false
     contexts: staging

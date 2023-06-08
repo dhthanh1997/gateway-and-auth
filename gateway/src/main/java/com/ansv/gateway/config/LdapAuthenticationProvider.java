@@ -115,20 +115,20 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
 
                 public CustomUserDetails mapFromAttributes(Attributes attributes) throws NamingException {
                     CustomUserDetails user = new CustomUserDetails();
-                    String uid = (String) attributes.get("uid").get();
-                    if (!DataUtils.isNullOrEmpty(attributes.get("sAMAccountName"))) {
+                    String uid = (String) attributes.get("userprincipalname").get();
+                    if (!DataUtils.isNullOrEmpty(attributes.get("samaccountname"))) {
 
                     }
 
-                    if (!DataUtils.isNullOrEmpty(attributes.get("displayName"))) {
-                        String displayName = (String) attributes.get("displayName").get();
+                    if (!DataUtils.isNullOrEmpty(attributes.get("displayname"))) {
+                        String displayName = (String) attributes.get("displayname").get();
                         user.setDisplayName(displayName);
                     } else {
                         user.setDisplayName(uid);
 
                     }
-                    if (!DataUtils.isNullOrEmpty(attributes.get("userPrincipalName"))) {
-                        String displayName = (String) attributes.get("userPrincipalName").get();
+                    if (!DataUtils.isNullOrEmpty(attributes.get("userprincipalname"))) {
+                        String displayName = (String) attributes.get("userprincipalname").get();
                         user.setEmail(displayName);
                     } else {
                         user.setEmail(uid);
