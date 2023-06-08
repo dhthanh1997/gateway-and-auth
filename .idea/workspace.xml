@@ -26,7 +26,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bddba51f-44ec-4eee-8431-d1ba0b8c1648" name="Default Changelist" comment="Merge branch 'prod-microservice' into dev_deploy&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml&#10;#&#9;authorization-server/Dockerfile&#10;#&#9;authorization-server/src/main/resources/application.yml&#10;#&#9;authorization-server/src/main/resources/liquibase.properties&#10;#&#9;euruka/src/main/resources/application.yml">
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-staging.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-staging.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application-prod.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,7 +397,7 @@
       <workItem from="1685325970751" duration="4006000" />
       <workItem from="1686021730694" duration="12887000" />
       <workItem from="1686102113679" duration="13533000" />
-      <workItem from="1686189441658" duration="6337000" />
+      <workItem from="1686189441658" duration="6469000" />
     </task>
     <task id="LOCAL-00001" summary="up">
       <created>1670835783305</created>
@@ -601,7 +602,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686216360025</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="update">
+      <created>1686216546245</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1686216546245</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -752,10 +760,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1683878938711" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1686216362665">
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1686216550050">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1686216362665" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1686216550050" />
     <state x="387" y="139" key="Vcs.Push.Dialog.v2/1920.240.1366.728/0.0.1920.1040@0.0.1920.1040" timestamp="1677691854592" />
     <state width="691" height="385" key="XDebugger.FullValuePopup" timestamp="1686214452349">
       <screen x="0" y="0" width="1366" height="728" />
