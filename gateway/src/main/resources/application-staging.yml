@@ -68,18 +68,18 @@ spring:
       #      password: userPassword
       dn-partterns: CN=Users,DC=ansv,DC=vn
 
-  datasource:
-    url: jdbc:postgresql://host.docker.internal:5432/Authorization
-    username: postgres
-    # password: root
-    password: 123456
-    jpa:
-      properties:
-        hibernate:
-          dialect: org.hibernate.dialect.PostgreSQLDialect
-      show-sql: true
-      hibernate:
-        ddl-auto: none
+#  datasource:
+#    url: jdbc:postgresql://host.docker.internal:5432/Authorization
+#    username: postgres
+#     password: root
+##    password: 123456
+#    jpa:
+#      properties:
+#        hibernate:
+#          dialect: org.hibernate.dialect.PostgreSQLDialect
+#      show-sql: true
+#      hibernate:
+#        ddl-auto: none
   liquibase:
     enabled: false
     contexts: staging
