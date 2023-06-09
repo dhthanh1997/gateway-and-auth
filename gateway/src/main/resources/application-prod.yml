@@ -67,7 +67,7 @@ spring:
       managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
       managerPassword: 123456
       filter: userPrincipalName
-      password: userPassword
+#      password: userPassword
       dn-partterns: CN=Users,DC=ansv,DC=vn
 
 #  datasource:
@@ -89,7 +89,7 @@ spring:
     type: redis
     host: 172.17.0.6
     port: 6379
-    password: password
+#    password: password
     ssl: false
   rabbitmq:
     host: 172.17.0.5
