@@ -115,7 +115,8 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
 
                 public CustomUserDetails mapFromAttributes(Attributes attributes) throws NamingException {
                     CustomUserDetails user = new CustomUserDetails();
-                    String uid = (String) attributes.get("userprincipalname").get();
+//                    String uid = (String) attributes.get("userprincipalname").get();
+                    String uid = (String) attributes.get("uid").get();
                     if (!DataUtils.isNullOrEmpty(attributes.get("samaccountname"))) {
 
                     }
@@ -141,11 +142,8 @@ public class LdapAuthenticationProvider implements AuthenticationProvider {
                 }
             });
 
-
 //
-//            UserDetails userDetails = customUserDetailService.loadUser(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
             UserDetails userDetails = customUserDetailService.loadUserDetails(users.get(0).getUsername(), users.get(0).getDisplayName(), users.get(0).getEmail());
-//            UserDetails userDetails = customUserDetailService.loadUserByUsername(authentication.getName());
             Authentication auth = new UsernamePasswordAuthenticationToken(userDetails,
                     authentication.getCredentials().toString(), new ArrayList<>());
             return auth;
