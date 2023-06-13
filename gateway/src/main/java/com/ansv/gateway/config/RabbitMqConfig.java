@@ -105,7 +105,7 @@ public class RabbitMqConfig {
 
     @Bean
     public Binding bindingHuman() {
-        return BindingBuilder.bind(queue()).to(directExchange()).with(environment.getProperty("spring.rabbitmq.routingkey-human"));
+        return BindingBuilder.bind(queueHumanSender()).to(directExchange()).with(environment.getProperty("spring.rabbitmq.routingkey-human"));
     }
 
     // sender
@@ -127,6 +127,7 @@ public class RabbitMqConfig {
     @Bean
     public Binding bindingReceived() {
         return BindingBuilder.bind(queueReceived()).to(directExchangeReceived()).with(environment.getProperty("spring.rabbitmq.routingkey-received"));
+//        return BindingBuilder.bind(queueReceived()).to(directExchange()).with(environment.getProperty("spring.rabbitmq.routingkey-received"));
     }
 
     @Bean
@@ -136,7 +137,8 @@ public class RabbitMqConfig {
 
     @Bean
     public Binding bindingHumanReceived() {
-        return BindingBuilder.bind(queueReceived()).to(directExchangeReceived()).with(environment.getProperty("spring.rabbitmq.routingkey-human-received"));
+        return BindingBuilder.bind(queueHumanReceived()).to(directExchangeReceived()).with(environment.getProperty("spring.rabbitmq.routingkey-human-received"));
+//        return BindingBuilder.bind(queueHumanReceived()).to(directExchange()).with(environment.getProperty("spring.rabbitmq.routingkey-human-received"));
     }
     // receiver
 

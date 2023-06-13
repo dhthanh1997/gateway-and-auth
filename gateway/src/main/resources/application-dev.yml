@@ -62,30 +62,30 @@ spring:
 #            - Method=GET,POST,PUT,DELETE
       httpserver:
         wiretap: true
-#  ldap:
-#    embedded:
-#      ldif: classpath:test-server.ldif
-#      base-dn: dc=springframework,dc=org
-#      port: 8389
-#      validation:
-#        enabled: true
-#    server:
-#      base: dc=springframework,dc=org
-#    authen:
-#      url: ldap://localhost:8389
-#      managerDn: uid=admin,ou=people,dc=springframework,dc=org
-#      managerPassword: 123456
-#      filter: uid
-#      password: userPassword
   ldap:
+    embedded:
+      ldif: classpath:test-server.ldif
+      base-dn: dc=springframework,dc=org
+      port: 8389
+      validation:
+        enabled: true
     server:
-      base: CN=Users,DC=ansv,DC=vn
+      base: dc=springframework,dc=org
     authen:
-      url: ldap://172.24.104.6:389
-      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
+      url: ldap://localhost:8389
+      managerDn: uid=admin,ou=people,dc=springframework,dc=org
       managerPassword: 123456
-      filter: userPrincipalName
-      dn-partterns: CN=Users,DC=ansv,DC=vn
+      filter: uid
+      password: userPassword
+#  ldap:
+#    server:
+#      base: CN=Users,DC=ansv,DC=vn
+#    authen:
+#      url: ldap://172.24.104.6:389
+#      managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
+#      managerPassword: 123456
+#      filter: userPrincipalName
+#      dn-partterns: CN=Users,DC=ansv,DC=vn
 
 #  datasource:
 #    url: jdbc:postgresql://localhost:5432/Authorization
@@ -153,6 +153,10 @@ app:
   admin:
     username: adminansv
     password: 123456a@
+
+  serviceInternal:
+    human: http://localhost:8098
+    task: http://localhost:8099
 
 
 

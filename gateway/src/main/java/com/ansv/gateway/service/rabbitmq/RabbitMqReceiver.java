@@ -26,15 +26,16 @@ public class RabbitMqReceiver implements RabbitListenerConfigurer {
         objectMapper.configure(DeserializationFeature.ACCEPT_EMPTY_STRING_AS_NULL_OBJECT, true);
     }
 
-    @RabbitListener(queues = "${spring.rabbitmq.queue}")
+    @RabbitListener(queues = {"${spring.rabbitmq.queue-received}"})
     public void receivedMessage(UserDTO user){
         logger.info("User Details Received is.. " + user.getUsername());
         userDTO = user;
     }
 
     @RabbitListener(queues = "${spring.rabbitmq.queue-human-received}")
-    public void receivedMessageFromHumanResource(String jsonObject) throws JsonProcessingException {
-        userDTO = objectMapper.readValue(jsonObject, UserDTO.class);
+    public void receivedMessageFromHumanResource(UserDTO user) throws JsonProcessingException {
+//        userDTO = objectMapper.readValue(jsonObject, UserDTO.class);
+        userDTO = user;
     }
 
     @Override

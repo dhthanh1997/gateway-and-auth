@@ -20,6 +20,6 @@ public interface CustomUserDetailService extends UserDetailsService {
 
     UserDetails loadUserByUsernameForInmemoryAuth(String username, String password);
 
-    UserDetails loadUserByUsernameFromHumanResource(String username) ;
+    UserDetails loadUserByUsernameFromHumanResource(UserDTO user) ;
 
 }

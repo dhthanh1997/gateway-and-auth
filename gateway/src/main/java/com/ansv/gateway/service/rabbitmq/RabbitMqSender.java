@@ -34,9 +34,11 @@ public class RabbitMqSender {
     @Value("${spring.rabbitmq.exchange:#{null}}")
     private String exchange;
 
+    // to task
     @Value("${spring.rabbitmq.routingkey:#{null}}")
     private String routingkey;
 
+    // to human
     @Value("${spring.rabbitmq.routingkey-human:#{null}}")
     private String routingkeyHuman;
 
@@ -54,25 +56,16 @@ public class RabbitMqSender {
     }
     // end
 
-    // sender to human service
-    public void senderUsernamToHuman(UserDTO user) {
+    // sender to human service for check username
+    public void senderUsernameToHuman(UserDTO user) {
         rabbitTemplate.convertAndSend(exchange, routingkeyHuman, user);
     }
     // end
 
+    // sender to human and task service for add user
     public void senderUserObject(UserDTO item) {
-
-        UserDTO userDTO = new UserDTO();
         rabbitTemplate.convertAndSend(exchange, routingkeyHuman, item);
-        try {
-//            if (DataUtils.notNull(jsonObject)) {
-//                userDTO = objectMapper.readValue(jsonObject, UserDTO.class);
-//            }
-//            return userDTO;
-        } catch (Exception exception) {
-            logger.error(exception.getMessage(), exception);
-//            return null;
-        }
+//        rabbitTemplate.convertAndSend(exchange, routingkey, item);
 
     }
 
