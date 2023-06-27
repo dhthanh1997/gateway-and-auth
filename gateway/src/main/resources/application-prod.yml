@@ -47,7 +47,7 @@ spring:
           predicates:
             - Path=/app2/**
         - id: task-management
-          uri: http://172.17.0.6:8092
+          uri: http://172.17.0.6:8098
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
