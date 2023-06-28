@@ -61,7 +61,7 @@ spring:
 
   ldap:
     server:
-      base: CN=Users,DC=ansv,DC=vn
+      base: DC=ansv,DC=vn
     authen:
       url: ldap://172.24.104.6:389
       managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
