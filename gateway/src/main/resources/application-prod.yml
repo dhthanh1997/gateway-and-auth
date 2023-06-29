@@ -5,11 +5,11 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://10.2.6.147:8052/eureka/
+      defaultZone: http://172.17.0.2:8052/eureka/
     register-with-eureka: true
     fetch-registry: true
   instance:
-    hostname: 10.2.6.147
+    hostname: 172.17.0.2
 
 
 spring:
@@ -39,20 +39,20 @@ spring:
             allowedHeaders: "*"
       routes:
         - id: app1
-          uri: http://10.2.6.147:8091
+          uri: http://172.17.0.5:8091
           predicates:
             - Path=/app1/**
         - id: app2
-          uri: http://10.2.6.147:8090
+          uri: http://172.17.0.5:8090
           predicates:
             - Path=/app2/**
         - id: task-management
-          uri: http://10.2.6.147:8092
+          uri: http://172.17.0.5:8092
           predicates:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
         - id: human-resource
-          uri: http://10.2.6.147:8099
+          uri: http://172.17.0.7:8099
           predicates:
             - Path=/humanResource/**
             - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
@@ -61,12 +61,12 @@ spring:
 
   ldap:
     server:
-      base: DC=ansv,DC=vn
+      base: CN=Users,DC=ansv,DC=vn
     authen:
       url: ldap://172.24.104.6:389
       managerDn: CN=Admin,CN=Users,DC=ansv,DC=vn
       managerPassword: 123456
-      filter: (&(objectClass=user)(userPrincipalName={0}))
+      filter: userPrincipalName
 #      password: userPassword
       dn-partterns: CN=Users,DC=ansv,DC=vn
 
@@ -87,12 +87,12 @@ spring:
   # redis configuration for caching
   cache:
     type: redis
-    host: 10.2.6.147
+    host: 172.17.0.3
     port: 6379
 #    password: password
     ssl: false
   rabbitmq:
-    host: 10.2.6.147
+    host: 172.17.0.4
     port: 5672
     username: guest
     password: guest
