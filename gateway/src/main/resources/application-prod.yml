@@ -5,11 +5,11 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://172.17.0.2:8052/eureka/
+      defaultZone: http://172.17.0.4:8052/eureka/
     register-with-eureka: true
     fetch-registry: true
   instance:
-    hostname: 172.17.0.2
+    hostname: 172.17.0.4
 
 
 spring:
@@ -52,7 +52,7 @@ spring:
             - Path=/taskManagement/**
             - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
         - id: human-resource
-          uri: http://172.17.0.7:8099
+          uri: http://172.17.0.6:8099
           predicates:
             - Path=/humanResource/**
             - Method=GET,POST,PUT,DELETE,OPTIONS,HEAD
@@ -92,7 +92,7 @@ spring:
 #    password: password
     ssl: false
   rabbitmq:
-    host: 172.17.0.4
+    host: 172.17.0.2
     port: 5672
     username: guest
     password: guest
